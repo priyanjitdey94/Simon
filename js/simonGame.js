@@ -153,7 +153,9 @@ var createEventListener=function(){
 			clearTimeout(st1);clearTimeout(st2);
 			clearTimeout(stCall1);clearTimeout(stCall2);
 			document.getElementById('ledtext').innerHTML="--";
+			document.getElementById('sOnOff').innerHTML="On";
 		}else{
+			document.getElementById('sOnOff').innerHTML="Off";
 			document.getElementById('sOnOff').style.backgroundColor="#5bf209";
 			onOff=1;
 			

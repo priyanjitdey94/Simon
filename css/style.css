@@ -108,6 +108,7 @@ button:focus {
 	font-size: 40px;
 	height: 25px;
 	font-family: "Alfa Slab One";
+	font-weight: 400;
 }
 
 .levelbox {
@@ -231,4 +232,5 @@ button:focus {
 	background-color: #f7070f;
 	border-width: 3px;
 	border-color: #302f2f;
+	font-family: "Oswald";
 }

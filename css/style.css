@@ -84,7 +84,6 @@ button:focus {
   border-bottom: 18px solid #070000;
   box-shadow: 0px 0px 20px #171819;
 }
-
 .inner {
 	height: 200px;
 	width: 200px;
@@ -109,6 +108,7 @@ button:focus {
 	height: 25px;
 	font-family: "Alfa Slab One";
 	font-weight: 400;
+
 }
 
 .levelbox {
@@ -146,6 +146,7 @@ button:focus {
 	background-color: #d80a0a;
 	border-width: 3px;
 	border-color: #302f2f;
+	box-shadow: 0px 0px 10px #171819;
 }
 
 .strictButton {
@@ -158,6 +159,7 @@ button:focus {
 	background-color: #fff607;
 	border-width: 3px;
 	border-color: #302f2f;
+	box-shadow: 0px 0px 10px #171819;
 }
 
 .indiLabel {
@@ -233,4 +235,5 @@ button:focus {
 	border-width: 3px;
 	border-color: #302f2f;
 	font-family: "Oswald";
+	box-shadow: 0px 0px 10px #171819;
 }

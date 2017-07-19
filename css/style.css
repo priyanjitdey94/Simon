@@ -1,0 +1,234 @@
+html {
+	height: 100%;
+    margin: 0;
+}
+
+body {
+	background-image: url("../assets/images/Background.png");
+	height: 100%;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	margin:0;
+}
+
+
+#container {
+	margin-left: 460px;
+	margin-top: 100px;
+}
+
+.row {
+	width:500px;
+}
+
+.buttons {
+	position: relative;
+}
+
+button:focus {
+	outline: none;
+}
+.btn1 {
+  height: 200px;
+  width: 200px;
+  display: block;
+  background: #17e510;
+  border-radius: 200px 0px 0px 0px;
+  float: left;
+  border-right: 8px solid #070000;
+  border-bottom: 8px solid #070000;
+  border-top: 18px solid #070000;
+  border-left: 18px solid #070000;
+  box-shadow: 0px 0px 20px #171819;
+}
+
+.btn2 {
+  height: 200px;
+  width: 200px;
+  display: block;
+  background: #e51025;
+  border-radius: 0px 200px 0px 0px;
+  float: left;
+  border-left: 8px solid #070000;
+  border-bottom: 8px solid #070000;
+  border-right: 18px solid #070000;
+  border-top: 18px solid #070000;
+  box-shadow: 0px 0px 20px #171819;
+}
+
+.btn3 {
+  height: 200px;
+  width: 200px;
+  display: block;
+  background: #fff20a;
+  border-radius: 0px 0px 0px 200px;
+  float: left;
+  border-left: 18px solid #070000;
+  border-top: 8px solid #070000;
+  border-right: 8px solid #070000;
+  border-bottom: 18px solid #070000;
+  box-shadow: 0px 0px 20px #171819;
+}
+
+.btn4 {
+  height: 200px;
+  width: 200px;
+  display: block;
+  background: #2330ea;
+  border-radius: 0px 0px 200px 0px;
+  float: left;
+  border-right: 18px solid #070000;
+  border-top: 8px solid #070000;
+  border-left: 8px solid #070000;
+  border-bottom: 18px solid #070000;
+  box-shadow: 0px 0px 20px #171819;
+}
+
+.inner {
+	height: 200px;
+	width: 200px;
+	top: 100px;
+	left: 100px;
+	display: block;
+	background: #ffffff;
+	position: absolute;
+	border-radius: 200px 200px 200px 200px;
+	border-right: 8px solid #070000;
+  	border-top: 8px solid #070000;
+  	border-left: 8px solid #070000;
+  	border-bottom: 8px solid #070000;
+  	margin-left: 450px;
+  	margin-top: 100px;
+}
+
+.h1text {
+	padding-left: 20px;
+	padding-top: 5px;
+	font-size: 40px;
+	height: 25px;
+	font-family: "Alfa Slab One";
+}
+
+.levelbox {
+	height: 33px;
+	width: 55px;
+	margin-left: 15px;
+	margin-top: 5px;
+	margin-bottom: 0px; 
+	background-color: #3a0202;
+	border-color: #302f2f;
+	border-width: 10px;
+	border-radius: 10px;
+	text-align: center;
+	
+}
+
+.led {
+	margin-top: -5px;
+	color: #631313;
+	font-family: "VT323";
+	font-size: 42px;
+}
+.displayButtons {
+	width: 400px;
+	height: 45px;
+	margin-top: 0px;
+}
+.startButton {
+	height: 34px;
+	width: 34px;
+	border-radius: 17px;
+	margin-left: 15px;
+	margin-top: 4px;
+	top: 10px;
+	background-color: #d80a0a;
+	border-width: 3px;
+	border-color: #302f2f;
+}
+
+.strictButton {
+	height: 34px;
+	width: 34px;
+	border-radius: 17px;
+	margin-left: 20px;
+	margin-top: 4px;
+	top: 10px;
+	background-color: #fff607;
+	border-width: 3px;
+	border-color: #302f2f;
+}
+
+.indiLabel {
+	height: 6px;
+	width: 6px;
+	margin-left: 25px;
+	margin-top: 0px;
+	border-radius: 3px;
+	border-width: 2px;
+	border-color: #fff607;
+	background-color: #fff607
+}
+
+.tx {
+	float: left;
+}
+.st {
+	float: left;
+}
+.strictMode {
+	float: left;
+	margin-top: 0px;
+	padding-top: 0px;
+}
+.indicator {
+	margin-top: 0px;
+	padding-top: 0px;
+	height: 8px;
+}
+
+.labels {
+	width: 400px;
+	height: 20px;
+	margin-top: 0px;
+
+}
+
+.lb1 {
+	float: left;
+	width: 64px;
+	height: 20px;
+	text-align: left;
+	margin-top: 0px;
+}
+.lb21 {
+	margin-top: 0px;
+	text-align: center;
+	margin-left: 25px;
+	font-family: "Oswald";
+}
+.lb22 {
+	margin-top: 0px;
+	text-align: center;
+	margin-left: 12px;
+	font-family: "Oswald";
+}
+.lb23 {
+	margin-top: 0px;
+	text-align: left;
+	margin-left: 15px;
+	font-family: "Oswald";
+}
+
+
+.switchOnOff {
+	height: 34px;
+	width: 34px;
+	border-radius: 17px;
+	margin-left: 85px;
+	margin-top: 8px;
+	top: 10px;
+	background-color: #f7070f;
+	border-width: 3px;
+	border-color: #302f2f;
+}

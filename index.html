@@ -1,14 +1,73 @@
+<!--
+Simon Game
+Developed By : Priyanjit Dey
+-->
+
 <!DOCTYPE html>
 <html>
 <head>
 	<title>
 		Simon Game
 	</title>
-</head>
-<body onload="render()">
 	<script type="text/javascript" src="./js/simonGame.js"></script>
-	<canvas id="gameCanvas" width="700" height="600">
-		
-	</canvas>
+	
+	<link href="https://fonts.googleapis.com/css?family=Alfa+Slab+One" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=VT323" rel="stylesheet">
+	
+	<audio id="soundbuttonGre" src="https://s3.amazonaws.com/freecodecamp/simonSound1.mp3"></audio>
+	<audio id="soundbuttonRed" src="https://s3.amazonaws.com/freecodecamp/simonSound2.mp3"></audio>
+	<audio id="soundbuttonYel" src="https://s3.amazonaws.com/freecodecamp/simonSound3.mp3"></audio>
+	<audio id="soundbuttonBlu" src="https://s3.amazonaws.com/freecodecamp/simonSound4.mp3"></audio>
+	<audio id="soundbuttonWrong" src="http://www.freesound.org/data/previews/331/331912_3248244-lq.mp3"></audio>
+
+	<link rel="stylesheet" type="text/css" href="./css/style.css">
+</head>
+<body width="700px" height="700px" onload="createEventListener()">
+	<div id="container" position="relative">
+		<div id="buttons">
+			<div class="row">
+				<button id="bt0" class="btn1"></button>
+				<button id="bt1" class="btn2"></button>
+			</div>
+			<div class="row">
+				<button id="bt2" class="btn3"></button>
+				<button id="bt3" class="btn4"></button>
+			</div>
+			<div class="inner">
+				<div>
+					<h1 class="h1text">Simon®</h1>
+				</div>
+				<div class="displayButtons">
+					<div class="tx levelbox">
+						<p id="ledtext" class="led">--</p>
+					</div>
+					<div class="st">
+						<button id="startB" class="startButton" onclick="render()"></button>
+						
+					</div>
+					<div class="strictMode">
+						<div>
+							<button id="strictB" class="strictButton" ></button>
+						</div>
+					</div>
+				</div>
+				<div class="labels">
+					<div class="lb1">
+						<h5 class="lb21">Count</h5>
+					</div>
+					<div class="lb1">
+						<h5 class="lb22">Start</h5>
+					</div>
+					<div class="lb1">
+						<h5 class="lb23">Strict</h5>
+					</div>
+				</div>
+				<div>
+					<button id="sOnOff" class="switchOnOff"></button>
+				</div>
+			</div>
+		</div>
+	</div>
 </body>
 </html>

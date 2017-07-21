@@ -38,10 +38,12 @@ var check=function(curInput){
 		}
 	}else{
 		console.log("Wrong Input" +curInput);
+		//disableButton();
 		(function(){
 			clearTimeout(st1);clearTimeout(st2);
 			clearTimeout(stCall1);clearTimeout(stCall2);
-				
+			
+			//disableButton();
 			setTimeout(function(){
 				document.getElementById('soundbuttonWrong').play();
 				document.getElementById('ledtext').innerHTML="!!";
@@ -67,7 +69,7 @@ var check=function(curInput){
 				}
 				executeGame(isStrict);
 			},2000);
-		
+			//enableButton();
 		})();
 	}
 }
@@ -80,6 +82,7 @@ var createEventListener=function(){
 	Color buttons
 	*/
 	document.getElementById('bt0').addEventListener('click',function(){
+		disableButton();
 		(function(id){
 			stCall1=setTimeout(function(){
 				document.getElementById('bt'+id).style.opacity=0.6;
@@ -92,6 +95,7 @@ var createEventListener=function(){
 		})(0);
 	});
 	document.getElementById('bt1').addEventListener('click',function(){
+		disableButton();
 		(function(id){
 			stCall1=setTimeout(function(){
 				document.getElementById('bt'+id).style.opacity=0.6;
@@ -104,6 +108,7 @@ var createEventListener=function(){
 		})(1);
 	});
 	document.getElementById('bt2').addEventListener('click',function(){
+		disableButton();
 		(function(id){
 			stCall1=setTimeout(function(){
 				document.getElementById('bt'+id).style.opacity=0.6;
@@ -116,6 +121,7 @@ var createEventListener=function(){
 		})(2);
 	});
 	document.getElementById('bt3').addEventListener('click',function(){
+		disableButton();
 		(function(id){
 			stCall1=setTimeout(function(){
 				document.getElementById('bt'+id).style.opacity=0.6;
@@ -222,10 +228,12 @@ var executeGame=function(type){
 		document.getElementById('ledtext').innerHTML=(curLevel<10?'0'+curLevel:curLevel);
 		console.log("Pushed element in sequence. Level: "+curLevel);
 		display();
+		enableButton();
 		return;
 	}else if(type===0){
 		document.getElementById('ledtext').innerHTML=(curLevel<10?'0'+curLevel:curLevel);
 		display();
+		//enableButton();
 		return;
 	}else if(curLevel===21){
 		console.log("You won!!!");
@@ -236,6 +244,7 @@ var executeGame=function(type){
 		curLevel++;
 		document.getElementById('ledtext').innerHTML=(curLevel<10?'0'+curLevel:curLevel);
 		console.log("Pushed element in sequence. Level: "+curLevel);
+		enableButton();
 		display();
 	}
 }

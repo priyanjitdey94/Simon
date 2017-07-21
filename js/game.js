@@ -90,7 +90,7 @@ Game.prototype.display=function(){
 Game.prototype.displayHelper=function(j,id,offset){
 	this.displayTimer1=setTimeout(function(){
 		document.getElementById('bt'+id).style.opacity=0.6;
-		document.getElementById('soundButton'+id).play();
+		document.getElementById('soundbutton'+id).play();
 	},(j*700)+offset);
 
 	this.displayTimer2=setTimeout(function(){

@@ -9,16 +9,19 @@ var GameObject=function(bId,bgC){
 
 GameObject.prototype.display=function(){
 	simon.disableControl(true);
-	this.displayTimer=setTimeout(function(){
-		document.getElementById('bt'+this.id).style.opacity=0.6;
+	var localThisObject=this;
+	var localDocument=document.getElementById('bt'+localThisObject.id);
+	localThisObject.displayTimer=setTimeout(function(){
+		localDocument.style.opacity=0.6;
 	},100);
-	this.displayTimer2=setTimeout(function(){
-		document.getElementById('bt'+this.id).style.opacity=1;
-		this.check();
+	localThisObject.displayTimer2=setTimeout(function(){
+		localDocument.style.opacity=1;
+		localThisObject.check();
 	},200);
 }
 
 GameObject.prototype.check=function(){
+	console.log(this.id);
 	if(this.id===simon.sequence[simon.moveNum]){
 		if(simon.moveNum===19){
 			simon.startSequence(1);
@@ -28,15 +31,16 @@ GameObject.prototype.check=function(){
 		}else{
 			simon.moveNum++;
 			simon.disableControl(false);
+			simon.waitForUser();
 		}
 	}else{
-		simon.showExclamation();
 		if(simon.isStrict===1){
-			simon.startSequence(1);
+			simon.showExclamation("!!",1);
 		}else{
-			simon.startSequence(2);
+			simon.showExclamation("!!",2)
 		}
 	}
+	//simon.waitForUser();
 }
 
 

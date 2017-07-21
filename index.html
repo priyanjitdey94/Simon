@@ -9,17 +9,19 @@ Developed By : Priyanjit Dey
 	<title>
 		Simon Game
 	</title>
-	<script type="text/javascript" src="./js/simonGame.js"></script>
+	<script type="text/javascript" src="./js/game.js"></script>
+	<script type="text/javascript" src="./js/gameObject.js"></script>
+	<script type="text/javascript" src="./js/eventHandler.js"></script>
 	
 	<link href="https://fonts.googleapis.com/css?family=Alfa+Slab+One" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=VT323" rel="stylesheet">
 	
-	<audio id="soundbutton0" src="../assets/audio/simonSound1.mp3"></audio>
-	<audio id="soundbutton1" src="../assets/audio/simonSound2.mp3"></audio>
-	<audio id="soundbutton2" src="../assets/audio/simonSound3.mp3"></audio>
-	<audio id="soundbutton3" src="../assets/audio/simonSound4.mp3"></audio>
-	<audio id="soundbuttonWrong" src="../assets/audio/331912_3248244-lq.mp3"></audio>
+	<audio id="soundbutton0" src="./assets/audio/simonSound1.mp3"></audio>
+	<audio id="soundbutton1" src="./assets/audio/simonSound2.mp3"></audio>
+	<audio id="soundbutton2" src="./assets/audio/simonSound3.mp3"></audio>
+	<audio id="soundbutton3" src="./assets/audio/simonSound4.mp3"></audio>
+	<audio id="soundbuttonWrong" src="./assets/audio/331912_3248244-lq.mp3"></audio>
 
 	<link rel="stylesheet" type="text/css" href="./css/style.css">
 </head>
@@ -43,7 +45,7 @@ Developed By : Priyanjit Dey
 						<p id="ledtext" class="led">--</p>
 					</div>
 					<div class="st">
-						<button id="startB" class="startButton" onclick="render()"></button>
+						<button id="startB" class="startButton"></button>
 						
 					</div>
 					<div class="strictMode">

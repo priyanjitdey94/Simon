@@ -42,6 +42,7 @@ Game.prototype.clearTimers=function(){
 }
 
 Game.prototype.showExclamation=function(){
+	this.disableControl(true);
 	setTimeout(function(){
 		document.getElementById('ledtext').style.color="#631313";
 	},100);
@@ -115,3 +116,4 @@ Game.prototype.disableControl=function(status){
 		document.getElementById('bt'+i).disabled=status;
 	}
 }
+

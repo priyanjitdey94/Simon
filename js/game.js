@@ -117,3 +117,4 @@ Game.prototype.disableControl=function(status){
 	}
 }
 
+var simon=new Game();

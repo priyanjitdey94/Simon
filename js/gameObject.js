@@ -37,6 +37,7 @@ GameObject.prototype.check=function(){
 		if(simon.isStrict===1){
 			simon.showExclamation("!!",1);
 		}else{
+			simon.moveNum=0;
 			simon.showExclamation("!!",2)
 		}
 	}

@@ -18,17 +18,23 @@ Game.prototype.initialize=function(){
 	this.sequence=[];
 	this.seqIterator=0;
 	this.moveNum=0;
+
+	document.getElementById('bt0').style.backgroundColor="#17e510";
+	document.getElementById('bt1').style.backgroundColor="#e51025";
+	document.getElementById('bt2').style.backgroundColor="#fff20a";
+	document.getElementById('bt3').style.backgroundColor="#2330ea";
 }
 
 Game.prototype.switchGame=function(){
 	//console.log("switchGame");
-	this.clearTimers();
 	this.disableControl(true);
 	if(this.onOff===0){
 		this.onOff=1;
 		document.getElementById('ledtext').style.color="#ea0707";
 	}else{
 		this.onOff=0;
+		this.clearTimers();
+		this.initialize();
 		document.getElementById('ledtext').innerHTML="--";
 		document.getElementById('ledtext').style.color="#631313";
 	}
@@ -37,6 +43,7 @@ Game.prototype.switchGame=function(){
 Game.prototype.clearTimers=function(){
 	//console.log("clearTimers");
 	var len=this.timerEvents.length;
+	console.log("timer length:"+len);
 	for(var i=0;i<len;i++){
 		clearTimeout(this.timerEvents[i]);
 	}
@@ -103,17 +110,21 @@ Game.prototype.display=function(){
 
 Game.prototype.displayHelper=function(j,id,offset){
 	var localThisObject=this;
-	localThisObject.displayTimer1=setTimeout(function(){
+	var t1,t2;
+	
+	t1=setTimeout(function(){
 		document.getElementById('bt'+id).style.opacity=0.6;
 		document.getElementById('soundbutton'+id).play();
 	},(j*700)+offset);
-
-	localThisObject.displayTimer2=setTimeout(function(){
+	localThisObject.timerEvents.push(t1);
+	
+	t2=setTimeout(function(){
 		document.getElementById('bt'+id).style.opacity=1;
 		if(j===localThisObject.seqIterator-1){
 			localThisObject.waitForUser();
 		}
 	},(j*700)+offset+320);
+	localThisObject.timerEvents.push(t2);
 }
 
 Game.prototype.waitForUser=function(){

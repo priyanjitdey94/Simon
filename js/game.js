@@ -34,7 +34,10 @@ Game.prototype.switchGame=function(){
 	}else{
 		this.onOff=0;
 		this.clearTimers();
-		this.initialize();
+		var localThisObject=this;
+		setTimeout(function(){
+			localThisObject.initialize();
+		},300);
 		document.getElementById('ledtext').innerHTML="--";
 		document.getElementById('ledtext').style.color="#631313";
 	}
@@ -115,16 +118,19 @@ Game.prototype.displayHelper=function(j,id,offset){
 	t1=setTimeout(function(){
 		document.getElementById('bt'+id).style.opacity=0.6;
 		document.getElementById('soundbutton'+id).play();
+
+		setTimeout(function(){
+			document.getElementById('bt'+id).style.opacity=1;
+			if(j===localThisObject.seqIterator-1){
+				localThisObject.waitForUser();
+			}
+		},320);
+		//localThisObject.timerEvents.push(t2);
+
 	},(j*700)+offset);
 	localThisObject.timerEvents.push(t1);
 	
-	t2=setTimeout(function(){
-		document.getElementById('bt'+id).style.opacity=1;
-		if(j===localThisObject.seqIterator-1){
-			localThisObject.waitForUser();
-		}
-	},(j*700)+offset+320);
-	localThisObject.timerEvents.push(t2);
+	
 }
 
 Game.prototype.waitForUser=function(){

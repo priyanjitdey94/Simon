@@ -113,14 +113,25 @@ Game.prototype.display=function(){
 
 Game.prototype.displayHelper=function(j,id,offset){
 	var localThisObject=this;
+	var localDocument=document.getElementById('bt'+id);
 	var t1,t2;
 	
 	t1=setTimeout(function(){
-		document.getElementById('bt'+id).style.opacity=0.6;
+		switch(id){
+			case 0:localDocument.style.backgroundColor="#89ed91";break;
+			case 1:localDocument.style.backgroundColor="#ef8686";break;
+			case 2:localDocument.style.backgroundColor="#f4ed89";break;
+			case 3:localDocument.style.backgroundColor="#6d75ed";break;
+		}
 		document.getElementById('soundbutton'+id).play();
 
 		setTimeout(function(){
-			document.getElementById('bt'+id).style.opacity=1;
+			switch(id){
+				case 0:localDocument.style.backgroundColor="#17e510";break;
+				case 1:localDocument.style.backgroundColor="#e51025";break;
+				case 2:localDocument.style.backgroundColor="#fff20a";break;
+				case 3:localDocument.style.backgroundColor="#2330ea";break;
+			}
 			if(j===localThisObject.seqIterator-1){
 				localThisObject.waitForUser();
 			}

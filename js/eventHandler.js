@@ -1,3 +1,15 @@
+/************************************************
+* SIMON 		- Memory game
+* Developed by 	- Priyanjit Dey
+* Organization	- FusionCharts
+*
+************************************************/
+
+/*
+* Function 			: createEventListener
+* Arguements 		: None
+* Purpose 			: click event listeners.
+*/
 
 var createEventListener=function(){
 	document.getElementById('bt0').addEventListener('click',function(){

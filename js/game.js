@@ -5,7 +5,17 @@
 *
 ************************************************/
 
-
+/*
+* CONSTRUCTOR 	: GAME
+* @onOff 		: Game status
+* @isStrict		: Strict Mode status
+* @sequence 	: Memory sequence
+* @seqIterator 	: Iterator for sequence
+* @moveNum 		: Keep track of user input
+* @timerEvents 	: Store all setTimeout calls.
+* @userTimer 	: Wait for user response.
+* @startTimer 	: Timer for start button.	
+*/
 var Game=function(){
 	this.onOff			= 0;
 	this.isStrict		= 0;
@@ -16,21 +26,39 @@ var Game=function(){
 	
 	this.timerEvents 	= [];
 	this.userTimer		= 0;
+	this.startTimer 	= 0;
 }
 
+/*
+* Function 		: initialize
+* Arguements	: None	
+* Purpose		: Reset everything
+*/
 Game.prototype.initialize=function(){
 	this.sequence=[];
 	this.seqIterator=0;
 	this.moveNum=0;
-
-	document.getElementById('bt0').style.backgroundColor="#17e510";
-	document.getElementById('bt1').style.backgroundColor="#e51025";
-	document.getElementById('bt2').style.backgroundColor="#fff20a";
-	document.getElementById('bt3').style.backgroundColor="#2330ea";
 }
 
+/*
+* Function 		: clearTimers
+* Arguements	: None
+* Purpose		: Clear all setTimeouts
+*/
+Game.prototype.clearTimers=function(){
+	var len=this.timerEvents.length;
+	clearTimeout(this.startTimer);
+	for(var i=0;i<len;i++){
+		clearTimeout(this.timerEvents[i]);
+	}
+}
+
+/*
+* Function 		: switchGame
+* Arguements 	: None
+* Purpose 		: Turn game on/off
+*/
 Game.prototype.switchGame=function(){
-	//console.log("switchGame");
 	this.disableControl(true);
 	if(this.onOff===0){
 		this.onOff=1;
@@ -47,18 +75,40 @@ Game.prototype.switchGame=function(){
 	}
 }
 
-Game.prototype.clearTimers=function(){
-	//console.log("clearTimers");
-	var len=this.timerEvents.length;
-	console.log("timer length:"+len);
-	for(var i=0;i<len;i++){
-		clearTimeout(this.timerEvents[i]);
+/*
+* Function 		: toggleStrictMode
+* Arguements 	: None
+* Purpose 		: Toggle strict mode.
+*/
+Game.prototype.toggleStrictMode=function(){
+	if(this.isStrict===0){
+		this.isStrict=1;
+	}else{
+		this.isStrict=0;
 	}
 }
 
+/*
+* Function 		: disableControl
+* Arguements 	: 1
+*				  - @status : boolean, sets button on/off 	
+* Purpose 		: Disables/Enables button
+*/
+Game.prototype.disableControl=function(status){
+	for(var i=0;i<4;i++){
+		document.getElementById('bt'+i).disabled=status;
+	}
+}
+
+/*
+* Function 		: showExclamation
+* Arguements 	: 2
+* 				  - @str : string, message to be displayed in the message box
+* 				  - @type: integer, the mode in which @startSequence should be invoked.
+* Purpose 		: Displays given text and invokes startSequence function in mentioned mode.
+*/
 Game.prototype.showExclamation=function(str,type){
-	//console.log("showExclamation");
-	var localThisObject=this;
+	var localThisObject=this;	//to store the this context
 	this.disableControl(true);
 	document.getElementById('ledtext').innerHTML=str;
 	setTimeout(function(){
@@ -76,21 +126,19 @@ Game.prototype.showExclamation=function(str,type){
 	},700);
 }
 
-Game.prototype.start=function(){
-	//console.log("start");
-	this.disableControl(true);
-	this.clearTimers();
-	this.initialize();
-	this.showExclamation("--",1);
-}
+
 
 /*
+* Function 		: startSequence
+* Arguements 	: 1
+* 				  - @seq : Mode 
+* Purpose 		: Creates sequence in given mode
+***Modes***
 * 0 : Normal Mode. Add a number and display
 * 1 : Strict Mode. Empty the array. Add number. Display
 * 2 : Repeat Mode. Only Display.
 */
 Game.prototype.startSequence=function(seq){
-	//console.log("startSequence");
 	this.disableControl(true);
 	if(seq===0){
 		this.sequence.push(Math.floor(Math.random()*4));
@@ -105,6 +153,11 @@ Game.prototype.startSequence=function(seq){
 	}
 }
 
+/*
+* Function 		: display
+* Arguements 	: None
+* Purpose 		: Driver function to visualize the sequence
+*/
 Game.prototype.display=function(){
 	//console.log("display");
 	document.getElementById('ledtext').innerHTML=this.seqIterator;
@@ -113,10 +166,15 @@ Game.prototype.display=function(){
 	}
 }
 
+/*
+* Function 		: displayHelper
+* Arguements 	: None
+* Purpose 		: Helper function to  create visualiztion of each button
+*/
 Game.prototype.displayHelper=function(j,id,offset){
 	var localThisObject=this;
 	var localDocument=document.getElementById('bt'+id);
-	var t1,t2;
+	var t1;
 	
 	t1=setTimeout(function(){
 		switch(id){
@@ -135,19 +193,22 @@ Game.prototype.displayHelper=function(j,id,offset){
 				case 3:localDocument.style.backgroundColor="#2330ea";break;
 			}
 			if(j===localThisObject.seqIterator-1){
+				document.getElementById('startB').disabled=false;
 				localThisObject.waitForUser();
 			}
 		},320);
-		//localThisObject.timerEvents.push(t2);
-
 	},(j*700)+offset);
 	localThisObject.timerEvents.push(t1);
 	
 	
 }
 
+/*
+* Function 		: waitForUser
+* Arguements 	: None
+* Purpose 		: Checks response time of user. If exceeds, visualizes again.
+*/
 Game.prototype.waitForUser=function(){
-	console.log("waitForUser");
 	this.disableControl(false);
 	var localThisObject=this;
 	localThisObject.userTimer=setTimeout(function(){
@@ -157,19 +218,18 @@ Game.prototype.waitForUser=function(){
 	},10000);
 }
 
-Game.prototype.disableControl=function(status){
-	//console.log("disableControl");
-	for(var i=0;i<4;i++){
-		document.getElementById('bt'+i).disabled=status;
-	}
+/*
+* Function 		: start
+* Arguements 	: None
+* Purpose 		: Execution starts here.
+*/
+Game.prototype.start=function(){
+	document.getElementById('startB').disabled=true;
+	this.disableControl(true);
+	this.clearTimers();
+	this.initialize();
+	this.showExclamation("--",1);
 }
-
-Game.prototype.toggleStrictMode=function(){
-	if(this.isStrict===0){
-		this.isStrict=1;
-	}else{
-		this.isStrict=0;
-	}
-}
+//*************************************************************************//
 
 var simon=new Game();

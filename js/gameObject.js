@@ -46,7 +46,6 @@ GameObject.prototype.display=function(){
 * Purpose 		: Checks whether the input is correct or not
 */
 GameObject.prototype.check=function(){
-	console.log(this.id);
 	if(this.id===simon.sequence[simon.moveNum]){
 		if(simon.moveNum===19){
 			simon.startSequence(1);

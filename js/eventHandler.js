@@ -34,7 +34,6 @@ var createEventListener=function(){
 
 	document.getElementById('strictB').addEventListener('click',function(){
 		if(simon.onOff===1){
-			clearTimeout(simon.userTimer);
 			simon.toggleStrictMode();
 		}
 	});

@@ -1,20 +1,24 @@
+/************************************************
+* SIMON 		- Memory game
+* Developed by 	- Priyanjit Dey
+* Organization	- FusionCharts
+*
+************************************************/
+
 
 var Game=function(){
-	this.onOff=0;
-	this.isStrict=0;
+	this.onOff			= 0;
+	this.isStrict		= 0;
 	
-	this.sequence=[];
-	this.seqIterator=0;
-	this.moveNum=0;
+	this.sequence 		= [];
+	this.seqIterator 	= 0;
+	this.moveNum 		= 0;
 	
-	this.timerEvents=[];
-	this.displayTimer1=0;
-	this.displayTimer2=0;
-	this.userTimer=0;
+	this.timerEvents 	= [];
+	this.userTimer		= 0;
 }
 
 Game.prototype.initialize=function(){
-	//console.log("initialize");
 	this.sequence=[];
 	this.seqIterator=0;
 	this.moveNum=0;
@@ -50,8 +54,6 @@ Game.prototype.clearTimers=function(){
 	for(var i=0;i<len;i++){
 		clearTimeout(this.timerEvents[i]);
 	}
-	clearTimeout(this.displayTimer1);
-	clearTimeout(this.displayTimer2);
 }
 
 Game.prototype.showExclamation=function(str,type){
@@ -159,6 +161,14 @@ Game.prototype.disableControl=function(status){
 	//console.log("disableControl");
 	for(var i=0;i<4;i++){
 		document.getElementById('bt'+i).disabled=status;
+	}
+}
+
+Game.prototype.toggleStrictMode=function(){
+	if(this.isStrict===0){
+		this.isStrict=1;
+	}else{
+		this.isStrict=0;
 	}
 }
 

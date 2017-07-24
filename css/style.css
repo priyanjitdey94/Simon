@@ -118,22 +118,7 @@ button:focus {
 	font-family: "Alfa Slab One";
 	font-weight: 400;
 }
-/*
-.ledtext {
-	float: left;
-	height: 25px;
-	width: 55px;
-	margin-left: 15px;
-	margin-top: 5px;
-	margin-bottom: 0px; 
-	background-color: #3a0202;
-	border-color: #302f2f;
-	border-width: 10px;
-	border-radius: 10px;
-	text-align: center;
-	
-}
-*/
+
 .led {
 	margin-top: -5px;
 	margin-left: 10px;
@@ -266,15 +251,41 @@ button:focus {
 
 
 .switchOnOff {
-	height: 34px;
-	width: 34px;
-	border-radius: 17px;
-	margin-left: 85px;
-	margin-top: 8px;
+	height: 20px;
+	width: 20px;
+	border-radius: 4px;
+	margin-left: 1px;
+	margin-top: 1px;
 	top: 10px;
-	background-color: #f7070f;
-	border-width: 3px;
+	background-color: #297be8;
+	border-width: 2px;
 	border-color: #302f2f;
 	font-family: "Oswald";
-	box-shadow: 0px 0px 10px #171819;
+}
+
+.switchOnOff.move {
+	margin-left: 23px;
+}
+
+.switchContainer {
+	width: 100px;
+	height: 25px;
+	margin-left: 55px;
+	margin-top: 10px;
+}
+
+.switchPara {
+	margin-left: 5px;
+	width: 45px;
+	background-color: #404347;
+	border-radius: 3px;
+	float: left;
+}
+
+.Off {
+	font-family: "Oswald";
+	text-align: right;
+	width: 20px;
+	padding-right: 0px;
+	float: left;
 }

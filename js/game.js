@@ -69,6 +69,7 @@ Game.prototype.switchGame=function(){
 		this.onOff=1;
 		document.getElementById('ledtext').style.color="#ea0707";
 		document.getElementById('startB').disabled=false;
+		document.getElementById('sOnOff').className+=" move";
 	}else{
 		this.onOff=0;
 		this.clearTimers();
@@ -78,6 +79,7 @@ Game.prototype.switchGame=function(){
 		},300);
 		document.getElementById('ledtext').innerHTML="--";
 		document.getElementById('ledtext').style.color="#631313";
+		document.getElementById('sOnOff').className="switchOnOff";
 	}
 }
 

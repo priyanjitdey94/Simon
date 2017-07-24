@@ -1,5 +1,5 @@
 /************************************************
-* SIMON 	- Memory game
+* SIMON 		- Memory game
 * Developed by 	- Priyanjit Dey
 * Organization	- FusionCharts
 *
@@ -7,8 +7,8 @@
 
 /*
 * CONSTRUCTOR 	: GameObject
-* @id 		: button ID. 0 - green; 1 - red; 2 - yellow; 3 - blue; 
-* @bgColor	: default color of button 
+* @id 			: button ID. 0 - green; 1 - red; 2 - yellow; 3 - blue; 
+* @bgColor		: default color of button 
 * @bgColorLight	: Color when blinking
 */
 var GameObject=function(bId,bgC,bgCL){
@@ -18,9 +18,9 @@ var GameObject=function(bId,bgC,bgCL){
 }
 
 /*
-* Function 	: display
+* Function 		: display
 * Arguements 	: None
-* Purpose 	: Visualization on click
+* Purpose 		: Visualization on click
 */
 GameObject.prototype.display=function(){
 	simon.disableControl(true);
@@ -41,9 +41,9 @@ GameObject.prototype.display=function(){
 }
 
 /*
-* Function 	: check
+* Function 		: check
 * Arguments 	: None
-* Purpose 	: Checks whether the input is correct or not
+* Purpose 		: Checks whether the input is correct or not
 */
 GameObject.prototype.check=function(){
 	if(this.id===simon.sequence[simon.moveNum]){

@@ -1,4 +1,4 @@
-# Simon-Game	[![Release][release-image]][releases]
+# Simon-Game	![Release][release-image][releases]
 
 *Memory game created using HTML, CSS & JavaScript*
 
@@ -20,4 +20,4 @@ This project is a part of an assignment from FusionCharts.
 + For bug-report, please create an issue in the issues section of this repository.
 
 # License
-+ [MIT](https://opensource.org/licenses/MIT) 
++ [MIT](https://opensource.org/licenses/MIT)

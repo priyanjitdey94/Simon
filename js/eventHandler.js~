@@ -1,14 +1,14 @@
 /************************************************
-* SIMON 	- Memory game
+* SIMON 		- Memory game
 * Developed by 	- Priyanjit Dey
 * Organization	- FusionCharts
 *
 ************************************************/
 
 /*
-* Function 	: createEventListener
-* Arguements 	: None
-* Purpose 	: click event listeners.
+* Function 			: createEventListener
+* Arguements 		: None
+* Purpose 			: click event listeners.
 */
 
 var createEventListener=function(){

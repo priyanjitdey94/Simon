@@ -33,13 +33,13 @@ button:focus {
   height: 226px;
   width: 226px;
   display: block;
-  background: #17e510;
+  background: #00BA47;
   border-radius: 226px 0px 0px 0px;
   float: left;
-  border-right: 8px solid #070000;
-  border-bottom: 8px solid #070000;
-  border-top: 18px solid #070000;
-  border-left: 18px solid #070000;
+  border-right: 10px solid #1a1b1c;
+  border-bottom: 10px solid #1a1b1c;
+  border-top: 20px solid #1a1b1c;
+  border-left: 20px solid #1a1b1c;
   box-shadow: 0px 0px 20px #171819;
 }
 
@@ -47,13 +47,13 @@ button:focus {
   height: 226px;
   width: 226px;
   display: block;
-  background: #e51025;
+  background: #A50000;
   border-radius: 0px 226px 0px 0px;
   float: left;
-  border-left: 8px solid #070000;
-  border-bottom: 8px solid #070000;
-  border-right: 18px solid #070000;
-  border-top: 18px solid #070000;
+  border-left: 10px solid #1a1b1c;
+  border-bottom: 10px solid #1a1b1c;
+  border-right: 20px solid #1a1b1c;
+  border-top: 20px solid #1a1b1c;
   box-shadow: 0px 0px 20px #171819;
 }
 
@@ -61,13 +61,13 @@ button:focus {
   height: 226px;
   width: 226px;
   display: block;
-  background: #fff20a;
+  background: #C6B800;
   border-radius: 0px 0px 0px 226px;
   float: left;
-  border-left: 18px solid #070000;
-  border-top: 8px solid #070000;
-  border-right: 8px solid #070000;
-  border-bottom: 18px solid #070000;
+  border-left: 20px solid #1a1b1c;
+  border-top: 10px solid #1a1b1c;
+  border-right: 10px solid #1a1b1c;
+  border-bottom: 20px solid #1a1b1c;
   box-shadow: 0px 0px 20px #171819;
 }
 
@@ -75,13 +75,13 @@ button:focus {
   height: 226px;
   width: 226px;
   display: block;
-  background: #2330ea;
+  background: #302293;
   border-radius: 0px 0px 226px 0px;
   float: left;
-  border-right: 18px solid #070000;
-  border-top: 8px solid #070000;
-  border-left: 8px solid #070000;
-  border-bottom: 18px solid #070000;
+  border-right: 20px solid #1a1b1c;
+  border-top: 10px solid #1a1b1c;
+  border-left: 10px solid #1a1b1c;
+  border-bottom: 20px solid #1a1b1c;
   box-shadow: 0px 0px 20px #171819;
 }
 .inner {
@@ -93,10 +93,10 @@ button:focus {
 	background: #ffffff;
 	position: absolute;
 	border-radius: 215px 215px 215px 215px;
-	border-right: 12px solid #070000;
-  	border-top: 12px solid #070000;
-  	border-left: 12px solid #070000;
-  	border-bottom: 12px solid #070000;
+	border-right: 12px solid #1a1b1c;
+  	border-top: 12px solid #1a1b1c;
+  	border-left: 12px solid #1a1b1c;
+  	border-bottom: 12px solid #1a1b1c;
   	margin-left: 450px;
   	margin-top: 100px;
 }
@@ -162,14 +162,20 @@ button:focus {
 }
 
 .strictChecker {
-	height: 8px;
-	width: 8px;
-	border-radius: 8px;
+	height: 10px;
+	width: 10px;
+	border-radius: 10px;
 	margin-top: -8px;
 	margin-left: 33px;
-	border-width: 2px;
+	border-width: 3px;
 	background-color: #302f2f;
 	border-color: #302f2f 
+}
+
+.strictChecker.active {
+	background-color: #ea0707;
+	border-color: #302f2f;
+	border-width: 3px;
 }
 
 .strictButton {
@@ -232,21 +238,24 @@ button:focus {
 	text-align: center;
 	margin-left: 15px;
 	font-family: "Oswald";
-	font-weight: 10px;
+	font-size: 13px;
+	/*font-weight: 10px;*/
 }
 .lb22 {
 	margin-top: 0px;
 	text-align: center;
 	margin-left: 12px;
 	font-family: "Oswald";
-	font-weight: 10px;
+	font-size: 13px;
+	/*font-weight: 10px;*/
 }
 .lb23 {
 	margin-top: 0px;
 	text-align: left;
-	margin-left: 15px;
+	margin-left: 12px;
 	font-family: "Oswald";
-	font-weight: 10px;
+	font-size: 13px;
+	/*font-weight: 10px;*/
 }
 
 
@@ -270,7 +279,7 @@ button:focus {
 .switchContainer {
 	width: 100px;
 	height: 25px;
-	margin-left: 55px;
+	margin-left: 58px;
 	margin-top: 10px;
 }
 
@@ -288,4 +297,6 @@ button:focus {
 	width: 20px;
 	padding-right: 0px;
 	float: left;
+	font-size: 14px;
+	font-weight: 10px;
 }

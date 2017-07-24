@@ -73,6 +73,9 @@ Game.prototype.switchGame=function(){
 	}else{
 		this.onOff=0;
 		this.clearTimers();
+		if(this.isStrict===1){
+			this.toggleStrictMode();
+		}
 		var localThisObject=this;
 		setTimeout(function(){
 			localThisObject.initialize();
@@ -91,8 +94,10 @@ Game.prototype.switchGame=function(){
 Game.prototype.toggleStrictMode=function(){
 	if(this.isStrict===0){
 		this.isStrict=1;
+		document.getElementById('strictCheckerB').className+=" active";
 	}else{
 		this.isStrict=0;
+		document.getElementById('strictCheckerB').className="strictChecker";
 	}
 }
 

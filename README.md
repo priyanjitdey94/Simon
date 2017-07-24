@@ -1,8 +1,9 @@
-# Simon-Game	![Release][release-image][releases]
+# Simon-Game	[![Release][release-image]][releases]
 
 *Memory game created using HTML, CSS & JavaScript*
 
 [release-image]: http://img.shields.io/badge/release-1.0-blue.svg?style=flat
+[releases]:https://github.com/priyanjitdey94/priyanjitdey94.github.io/releases/tag/1.0
 
 This project is a part of an assignment from FusionCharts.
 
@@ -20,4 +21,4 @@ This project is a part of an assignment from FusionCharts.
 + For bug-report, please create an issue in the issues section of this repository.
 
 # License
-+ [MIT](https://opensource.org/licenses/MIT)
++ [MIT](https://opensource.org/licenses/MIT) 

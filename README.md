@@ -1,4 +1,4 @@
-# Simon-Game	![Release][release-image][releases]
+# Simon-Game	[![Release][release-image]][releases]
 
 *Memory game created using HTML, CSS & JavaScript*
 

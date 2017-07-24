@@ -70,7 +70,7 @@ GameObject.prototype.check=function(){
 
 //*********************************************************//
 
-var button0=new GameObject(0,"#17e510","#89ed91");
-var button1=new GameObject(1,"#e51025","#ef8686");
-var button2=new GameObject(2,"#fff20a","#f4ed89");
-var button3=new GameObject(3,"#2330ea","#6d75ed");
+var button0=new GameObject(0,"#00BA47","#89ed91");
+var button1=new GameObject(1,"#A50000","#ef8686");
+var button2=new GameObject(2,"#C6B800","#f4ed89");
+var button3=new GameObject(3,"#302293","#6d75ed");

@@ -203,10 +203,10 @@ Game.prototype.displayHelper=function(j,id,offset){
 
 		setTimeout(function(){
 			switch(id){
-				case 0:localDocument.style.backgroundColor="#17e510";break;
-				case 1:localDocument.style.backgroundColor="#e51025";break;
-				case 2:localDocument.style.backgroundColor="#fff20a";break;
-				case 3:localDocument.style.backgroundColor="#2330ea";break;
+				case 0:localDocument.style.backgroundColor="#00BA47";break;
+				case 1:localDocument.style.backgroundColor="#A50000";break;
+				case 2:localDocument.style.backgroundColor="#C6B800";break;
+				case 3:localDocument.style.backgroundColor="#302293";break;
 			}
 			if(j===localThisObject.seqIterator-1){
 				document.getElementById('startB').disabled=false;

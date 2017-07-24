@@ -25,6 +25,7 @@ var Game=function(){
 	this.moveNum 		= 0;
 	
 	this.timerEvents 	= [];
+	this.blinkEvents	= [];
 	this.userTimer		= 0;
 	this.startTimer 	= 0;
 }
@@ -51,6 +52,10 @@ Game.prototype.clearTimers=function(){
 	for(var i=0;i<len;i++){
 		clearTimeout(this.timerEvents[i]);
 	}
+	len=this.blinkEvents.length;
+	for(var i=0;i<len;i++){
+		clearTimeout(this.blinkEvents[i]);
+	}
 }
 
 /*
@@ -63,15 +68,21 @@ Game.prototype.switchGame=function(){
 	if(this.onOff===0){
 		this.onOff=1;
 		document.getElementById('ledtext').style.color="#ea0707";
+		document.getElementById('startB').disabled=false;
+		document.getElementById('sOnOff').className+=" move";
 	}else{
 		this.onOff=0;
 		this.clearTimers();
+		if(this.isStrict===1){
+			this.toggleStrictMode();
+		}
 		var localThisObject=this;
 		setTimeout(function(){
 			localThisObject.initialize();
 		},300);
 		document.getElementById('ledtext').innerHTML="--";
 		document.getElementById('ledtext').style.color="#631313";
+		document.getElementById('sOnOff').className="switchOnOff";
 	}
 }
 
@@ -83,8 +94,10 @@ Game.prototype.switchGame=function(){
 Game.prototype.toggleStrictMode=function(){
 	if(this.isStrict===0){
 		this.isStrict=1;
+		document.getElementById('strictCheckerB').className+=" active";
 	}else{
 		this.isStrict=0;
+		document.getElementById('strictCheckerB').className="strictChecker";
 	}
 }
 
@@ -111,19 +124,22 @@ Game.prototype.showExclamation=function(str,type){
 	var localThisObject=this;	//to store the this context
 	this.disableControl(true);
 	document.getElementById('ledtext').innerHTML=str;
-	setTimeout(function(){
+
+	var t1=setTimeout(function(){
 		document.getElementById('ledtext').style.color="#631313";
 	},100);
-	setTimeout(function(){
+	var t2=setTimeout(function(){
 		document.getElementById('ledtext').style.color="#ea0707";
 	},300);
-	setTimeout(function(){
+	var t3=setTimeout(function(){
 		document.getElementById('ledtext').style.color="#631313";
 	},500);
-	setTimeout(function(){
+	var t4=setTimeout(function(){
 		document.getElementById('ledtext').style.color="#ea0707";
 		localThisObject.startSequence(type);
 	},700);
+	this.blinkEvents.push(t1);this.blinkEvents.push(t2);
+	this.blinkEvents.push(t3);this.blinkEvents.push(t4);
 }
 
 

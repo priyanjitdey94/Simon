@@ -1,0 +1,162 @@
+@media only screen and (max-width: 650px) {
+	#container{
+		margin-left: 10vw;
+	}
+    .row {
+    	width: 80vw;
+    }
+    .btn1 {
+    	width: 40vw;
+    	height: 40vw;
+    	border-radius: 40vw 0 0 0;
+    	border-right: 3vw solid #1a1b1c;
+		border-bottom: 3vw solid #1a1b1c;
+		border-top: 3vw solid #1a1b1c;
+		border-left: 3vw solid #1a1b1c;
+
+    }
+    .btn2 {
+    	width: 40vw;
+    	height: 40vw;
+    	border-radius: 0 40vw 0 0;
+    	border-right: 3vw solid #1a1b1c;
+		border-bottom: 3vw solid #1a1b1c;
+		border-top: 3vw solid #1a1b1c;
+		border-left: 3vw solid #1a1b1c;
+    }
+    .btn3 {
+    	width: 40vw;
+    	height: 40vw;
+    	border-radius: 0 0 0 40vw;
+    	border-right: 3vw solid #1a1b1c;
+		border-bottom: 3vw solid #1a1b1c;
+		border-top: 3vw solid #1a1b1c;
+		border-left: 3vw solid #1a1b1c;
+    }
+    .btn4 {
+    	width: 40vw;
+    	height: 40vw;
+    	border-radius: 0 0 40vw 0;
+    	border-right: 3vw solid #1a1b1c;
+		border-bottom: 3vw solid #1a1b1c;
+		border-top: 3vw solid #1a1b1c;
+		border-left: 3vw solid #1a1b1c;
+    }
+    .inner {
+    	height: 40vw;
+		width: 40vw;
+		border-radius: 40vw;
+		left: 18vw;
+    }
+    .h1text {
+    	left: 4vw;
+    	font-size: 9vw;
+    	height: 6vw;
+    }
+    .trademark{
+    	top: 2vw;
+    	font-size: 4vw;
+    }
+    .led{
+    	margin-top: -2vw;
+		margin-left: 2.768vw;
+		height: 8vw;
+		width: 12vw;
+		border-width: 0.5vw;
+		border-radius: 2vw;
+		font-size: 5.228vw;
+		line-height: 2.768vw;
+    }
+    .displayButtons {
+		width: 50vw;
+		height: 7vw;
+		margin-top: 20vw;
+		margin-left: 1vw;
+	}
+	.labels{
+		width: 28vw;
+		height: 3vw;
+		margin-top: 25vw;
+		margin-left: 3vw;
+	}
+	.startButton {
+		height: 6vw;
+		width: 6vw;
+		border-radius: 6vw;
+		margin-left: 2.7vw;
+		margin-top: -0.75vw;
+		top: 0vw;
+		border-width: 0.5vw;
+	}
+	.strictChecker {
+		height: 1.5vw;
+		width: 1.5vw;
+		border-radius: 1.5vw;
+		margin-top: -3vw;
+		margin-left: 5vw;
+		border-width: 0.23vw;
+	}
+
+	.strictButton {
+		height: 6vw;
+		width: 6vw;
+		border-radius: 6vw;
+		margin-left:3vw;
+		margin-top: 0.6vw;
+		top: 0;
+		border-width: 0.5vw;
+	}
+
+	.labels {
+		width: 19vw;
+		height: 7vw;
+		margin-top: 27vw;
+		margin-left: 3vw;
+	}
+
+	.lb21 {
+		margin-left: 4vw;
+		font-size: 2.2vw;
+	}
+	.lb22 {
+		margin-left: 11vw;
+		font-size: 2.2vw;
+	}
+	.lb23 {
+		margin-left: 15vw;
+		font-size: 2.2vw;
+	}
+	.switchOnOff {
+		height: 3.5vw;
+		width: 3.5vw;
+		border-radius: 0.307vw;
+		margin-left: 0.076vw;
+		margin-top: 0.076vw;
+		top: 0.768vw;
+		border-width: 0.153vw;
+	}
+
+	.switchOnOff.move {
+		margin-left: 4.1vw;
+	}
+
+	.switchContainer {
+		width: 20vw;
+		height: 7vw;
+		margin-left: 12vw;
+		margin-top: 0vw;
+	}
+
+	.switchPara {
+		margin-left: 1vw;
+		width: 8vw;
+		border-radius: 0.23vw;
+	}
+
+	.Off {
+		width: 3vw;
+		padding-right: 0;
+		font-size: 2.6vw;
+		font-weight: 0.768vw;
+	}
+}

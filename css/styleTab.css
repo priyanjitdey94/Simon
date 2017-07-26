@@ -1,0 +1,164 @@
+@media only screen and (max-width: 1025px) {
+	#container{
+		margin-left: 20vw;
+	}
+    .row {
+    	width: 60vw;
+    }
+    .btn1 {
+    	width: 28vw;
+    	height: 28vw;
+    	border-radius: 28vw 0 0 0;
+    	border-right: 2.5vw solid #1a1b1c;
+		border-bottom: 2.5vw solid #1a1b1c;
+		border-top: 2.5vw solid #1a1b1c;
+		border-left: 2.5vw solid #1a1b1c;
+
+    }
+    .btn2 {
+    	width: 28vw;
+    	height: 28vw;
+    	border-radius: 0 28vw 0 0;
+    	border-right: 2.5vw solid #1a1b1c;
+		border-bottom: 2.5vw solid #1a1b1c;
+		border-top: 2.5vw solid #1a1b1c;
+		border-left: 2.5vw solid #1a1b1c;
+
+    }
+    .btn3 {
+    	width: 28vw;
+    	height: 28vw;
+    	border-radius: 0 0 0 28vw;
+    	border-right: 2.5vw solid #1a1b1c;
+		border-bottom: 2.5vw solid #1a1b1c;
+		border-top: 2.5vw solid #1a1b1c;
+		border-left: 2.5vw solid #1a1b1c;
+
+    }
+    .btn4 {
+    	width: 28vw;
+    	height: 28vw;
+    	border-radius: 0 0 28vw 0;
+    	border-right: 2.5vw solid #1a1b1c;
+		border-bottom: 2.5vw solid #1a1b1c;
+		border-top: 2.5vw solid #1a1b1c;
+		border-left: 2.5vw solid #1a1b1c;
+
+    }
+    .inner {
+    	height: 28vw;
+		width: 28vw;
+		left: 12.5vw;
+    }
+    .h1text {
+    	left: 2.5vw;
+    	font-size: 6.5vw;
+    	height: 6vw;
+    }
+    .trademark{
+    	top: 2vw;
+    	font-size: 2.5vw;
+    }
+    .led{
+    	margin-top: -2vw;
+		margin-left: 2.768vw;
+		height: 5.458vw;
+		width: 6.996vw;
+		border-width: 0.5vw;
+		border-radius: 1vw;
+		font-size: 5.228vw;
+		line-height: 2.768vw;
+    }
+    .displayButtons {
+		width: 30vw;
+		height: 7vw;
+		margin-top: 15vw;
+		margin-left: 1vw;
+	}
+	.labels{
+		width: 28vw;
+		height: 3vw;
+		margin-top: 20vw;
+		margin-left: 3vw;
+	}
+	.startButton {
+		height: 4vw;
+		width: 4vw;
+		border-radius: 4vw;
+		margin-left: 2.7vw;
+		margin-top: -0.75vw;
+		top: 0vw;
+		border-width: 0.5vw;
+	}
+	.strictChecker {
+		height: 1vw;
+		width: 1vw;
+		border-radius: 1vw;
+		margin-top: -2vw;
+		margin-left: 4vw;
+		border-width: 0.23vw;
+	}
+
+	.strictButton {
+		height: 4vw;
+		width: 4vw;
+		border-radius: 4vw;
+		margin-left:2.5vw;
+		margin-top: -.0.25vw;
+		top: 0;
+		border-width: 0.5vw;
+	}
+
+	.labels {
+		width: 19vw;
+		height: 3vw;
+		margin-top: 19vw;
+		margin-left: 3vw;
+	}
+
+	.lb21 {
+		margin-left: 2.3vw;
+		font-size: 1.5vw;
+	}
+	.lb22 {
+		margin-left: 5.75vw;
+		font-size: 1.5vw;
+	}
+	.lb23 {
+		margin-left: 7.4vw;
+		font-size: 1.5vw;
+	}
+	.switchOnOff {
+		height: 2.5vw;
+		width: 2.5vw;
+		border-radius: 0.307vw;
+		margin-left: 0.076vw;
+		margin-top: 0.076vw;
+		top: 0.768vw;
+		border-width: 0.153vw;
+	}
+
+	.switchOnOff.move {
+		margin-left: 2.4vw;
+	}
+
+	.switchContainer {
+		width: 15vw;
+		height: 4vw;
+		margin-left: 8vw;
+		margin-top: 1vw;
+	}
+
+	.switchPara {
+		margin-left: 1vw;
+		width: 5vw;
+		border-radius: 0.23vw;
+	}
+
+	.Off {
+		width: 3vw;
+		padding-right: 0;
+		font-size: 1.75vw;
+		font-weight: 0.768vw;
+	}
+}

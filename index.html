@@ -19,16 +19,16 @@ Developed By : Priyanjit Dey
 	<link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=VT323" rel="stylesheet">
 	
-	<audio id="soundbutton0" src="./assets/audio/simonSound1.mp3"></audio>
-	<audio id="soundbutton1" src="./assets/audio/simonSound2.mp3"></audio>
-	<audio id="soundbutton2" src="./assets/audio/simonSound3.mp3"></audio>
-	<audio id="soundbutton3" src="./assets/audio/simonSound4.mp3"></audio>
-	<audio id="soundbuttonWrong" src="./assets/audio/331912_3248244-lq.mp3"></audio>
-	
-	<link rel="stylesheet" type="text/css" href="./css/styleDesktop.css">
-	<link rel="stylesheet" type="text/css" href="./css/styleMobile.css">
-	<link rel="stylesheet" type="text/css" href="./css/styleTab.css">
+	<audio id="soundbutton0" src="./assets/audio/simonSound0.ogg"></audio>
+	<audio id="soundbutton1" src="./assets/audio/simonSound1.ogg"></audio>
+	<audio id="soundbutton2" src="./assets/audio/simonSound2.ogg"></audio>
+	<audio id="soundbutton3" src="./assets/audio/simonSound3.ogg"></audio>
+	<audio id="soundbuttonWrong" src="./assets/audio/buzz_sound.ogg"></audio>
 
+	<link rel="stylesheet" type="text/css" href="./css/styleDesktop.css">
+	<link rel="stylesheet" type="text/css" href="./css/styleTab.css">
+	<link rel="stylesheet" type="text/css" href="./css/styleMobile.css">
+	
 </head>
 <body width="700px" height="700px" onload="createEventListener()">
 	<div id="container" position="relative" >
@@ -50,13 +50,13 @@ Developed By : Priyanjit Dey
 						<button id="ledtext" class="led" disabled="true">--</button>
 					</div>
 					<div class="st">
-						<button id="startB" class="startButton"></button>
+						<div id="startB" class="startButton"></div>
 						
 					</div>
 					<div class="strictMode">
 						<div>
 							<div id="strictCheckerB" class="strictChecker"></div>
-							<button id="strictB" class="strictButton" ></button>
+							<div id="strictB" class="strictButton" ></div>
 						</div>
 					</div>
 				</div>
@@ -73,7 +73,7 @@ Developed By : Priyanjit Dey
 				</div>
 				<div class="switchContainer">
 					<div class="Off">OFF</div>
-					<div class="switchPara"><button id="sOnOff" class="switchOnOff"></button></div>
+					<div class="switchPara"><div id="sOnOff" class="switchOnOff"></button></div></div>
 					<div class="Off">ON</div>
 				</div>
 			</div>

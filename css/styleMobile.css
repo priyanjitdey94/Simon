@@ -1,4 +1,4 @@
-@media only screen and (max-width: 650px) {
+@media only screen and (max-width: 660px) {
 	#container{
 		margin-left: 10vw;
 	}
@@ -49,7 +49,7 @@
 		left: 18vw;
     }
     .h1text {
-    	left: 4vw;
+    	left: 3.8vw;
     	font-size: 9vw;
     	height: 6vw;
     }
@@ -123,21 +123,21 @@
 		font-size: 2.2vw;
 	}
 	.lb23 {
-		margin-left: 15vw;
+		margin-left: 16.5vw;
 		font-size: 2.2vw;
 	}
 	.switchOnOff {
 		height: 3.5vw;
 		width: 3.5vw;
 		border-radius: 0.307vw;
-		margin-left: 0.076vw;
-		margin-top: 0.076vw;
+		margin-left: 0.2vw;
+		margin-top: 0.1vw;
 		top: 0.768vw;
 		border-width: 0.153vw;
 	}
 
 	.switchOnOff.move {
-		margin-left: 4.1vw;
+		margin-left: 4.2vw;
 	}
 
 	.switchContainer {
@@ -150,6 +150,7 @@
 	.switchPara {
 		margin-left: 1vw;
 		width: 8vw;
+		height: 3.8vw;
 		border-radius: 0.23vw;
 	}
 

@@ -85,8 +85,8 @@
 		height: 4vw;
 		width: 4vw;
 		border-radius: 4vw;
-		margin-left: 2.7vw;
-		margin-top: -0.75vw;
+		margin-left: 2.2vw;
+		margin-top: -1.4vw;
 		top: 0vw;
 		border-width: 0.5vw;
 	}
@@ -94,8 +94,8 @@
 		height: 1vw;
 		width: 1vw;
 		border-radius: 1vw;
-		margin-top: -2vw;
-		margin-left: 4vw;
+		margin-top: -3vw;
+		margin-left: 3.3vw;
 		border-width: 0.23vw;
 	}
 
@@ -103,8 +103,8 @@
 		height: 4vw;
 		width: 4vw;
 		border-radius: 4vw;
-		margin-left:2.5vw;
-		margin-top: -.0.25vw;
+		margin-left:1.75vw;
+		margin-top: 0.3vw;
 		top: 0;
 		border-width: 0.5vw;
 	}
@@ -152,6 +152,7 @@
 	.switchPara {
 		margin-left: 1vw;
 		width: 5vw;
+		height: 2.8vw;
 		border-radius: 0.23vw;
 	}
 

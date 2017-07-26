@@ -15,7 +15,6 @@ body {
 	background-repeat: no-repeat;
 	background-size: cover;
 	margin:0;
-	min-width: 400px;
 }
 
 
@@ -167,27 +166,26 @@ button::-moz-focus-inner {
 	margin-left: 0.384vw;
 }
 .startButton {
-	height: 2.305vw;
-	width: 2.305vw;
-	border-radius: 1.152vw;
-	margin-left: 1.383vw;
-	margin-top: 0.307vw;
+	height: 2.2vw;
+	width: 2.2vw;
+	border-radius: 2.2vw;
+	margin-left: 1.3vw;
+	margin-top: 0.42vw;
 	top: 0.768vw;
 	background-color: #d80a0a;
-	border-width: 0.23vw;
-	border-color: #302f2f;
+	border: 0.23vw solid #302f2f;
 	box-shadow: 0 0 0.768vw #171819;
 }
 
 .strictChecker {
-	height: 0.768vw;
-	width: 0.768vw;
+	height: 0.3vw;
+	width: 0.3vw;
 	border-radius: 0.768vw;
-	margin-top: -0.614vw;
-	margin-left: 2.536vw;
-	border-width: 0.23vw;
 	background-color: #302f2f;
-	border-color: #302f2f 
+	margin-top: -0.614vw;
+	margin-left: 2.3vw;
+	border: 0.23vw solid #302f2f;
+	border-color: #302f2f; 
 }
 
 .strictChecker.active {
@@ -197,15 +195,14 @@ button::-moz-focus-inner {
 }
 
 .strictButton {
-	height: 2.305vw;
-	width: 2.305vw;
-	border-radius: 1.152vw;
-	margin-left: 1.767vw;
+	height: 2.2vw;
+	width: 2.2vw;
+	border-radius: 2.2vw;
+	margin-left: 1.4vw;
 	margin-top: 0.307vw;
 	top: 0.768vw;
 	background-color: #fff607;
-	border-width: 0.23vw;
-	border-color: #302f2f;
+	border: 0.23vw solid #302f2f;
 	box-shadow: 0 0 0.768vw #171819;
 }
 
@@ -281,8 +278,8 @@ button::-moz-focus-inner {
 	height: 1.537vw;
 	width: 1.537vw;
 	border-radius: 0.307vw;
-	margin-left: 0.076vw;
-	margin-top: 0.076vw;
+	margin-left: 0.1vw;
+	margin-top: 0.1vw;
 	top: 0.768vw;
 	background-color: #297be8;
 	border-width: 0.153vw;
@@ -295,7 +292,7 @@ button::-moz-focus-inner {
 }
 
 .switchContainer {
-	width: 7.686vw;
+	width: 9vw;
 	height: 1.921vw;
 	margin-left: 4.458vw;
 	margin-top: 0.768vw;
@@ -304,6 +301,7 @@ button::-moz-focus-inner {
 .switchPara {
 	margin-left: 0.384vw;
 	width: 3.458vw;
+	height: 1.8vw;
 	background-color: #404347;
 	border-radius: 0.23vw;
 	float: left;

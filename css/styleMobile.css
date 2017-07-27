@@ -2,63 +2,63 @@
 	#container{
 		margin-left: 10vw;
 	}
-    .row {
-    	width: 80vw;
-    }
-    .btn1 {
-    	width: 40vw;
-    	height: 40vw;
-    	border-radius: 40vw 0 0 0;
-    	border-right: 3vw solid #1a1b1c;
+	.row {
+		width: 80vw;
+	}
+	.btn1 {
+		width: 40vw;
+		height: 40vw;
+		border-radius: 40vw 0 0 0;
+		border-right: 3vw solid #1a1b1c;
 		border-bottom: 3vw solid #1a1b1c;
 		border-top: 3vw solid #1a1b1c;
 		border-left: 3vw solid #1a1b1c;
 
-    }
-    .btn2 {
-    	width: 40vw;
-    	height: 40vw;
-    	border-radius: 0 40vw 0 0;
-    	border-right: 3vw solid #1a1b1c;
+	}
+	.btn2 {
+		width: 40vw;
+		height: 40vw;
+		border-radius: 0 40vw 0 0;
+		border-right: 3vw solid #1a1b1c;
 		border-bottom: 3vw solid #1a1b1c;
 		border-top: 3vw solid #1a1b1c;
 		border-left: 3vw solid #1a1b1c;
-    }
-    .btn3 {
-    	width: 40vw;
-    	height: 40vw;
-    	border-radius: 0 0 0 40vw;
-    	border-right: 3vw solid #1a1b1c;
+	}
+	.btn3 {
+		width: 40vw;
+		height: 40vw;
+		border-radius: 0 0 0 40vw;
+		border-right: 3vw solid #1a1b1c;
 		border-bottom: 3vw solid #1a1b1c;
 		border-top: 3vw solid #1a1b1c;
 		border-left: 3vw solid #1a1b1c;
-    }
-    .btn4 {
-    	width: 40vw;
-    	height: 40vw;
-    	border-radius: 0 0 40vw 0;
-    	border-right: 3vw solid #1a1b1c;
+	}
+	.btn4 {
+		width: 40vw;
+		height: 40vw;
+		border-radius: 0 0 40vw 0;
+		border-right: 3vw solid #1a1b1c;
 		border-bottom: 3vw solid #1a1b1c;
 		border-top: 3vw solid #1a1b1c;
 		border-left: 3vw solid #1a1b1c;
-    }
-    .inner {
-    	height: 40vw;
+	}
+	.inner {
+		height: 40vw;
 		width: 40vw;
 		border-radius: 40vw;
 		left: 18vw;
-    }
-    .h1text {
-    	left: 3.8vw;
-    	font-size: 9vw;
-    	height: 6vw;
-    }
-    .trademark{
-    	top: 2vw;
-    	font-size: 4vw;
-    }
-    .led{
-    	margin-top: -2vw;
+	}
+	.h1text {
+		left: 3.8vw;
+		font-size: 9vw;
+		height: 6vw;
+	}
+	.trademark{
+		top: 2vw;
+		font-size: 4vw;
+	}
+	.led{
+		margin-top: -2vw;
 		margin-left: 2.768vw;
 		height: 8vw;
 		width: 12vw;
@@ -66,8 +66,8 @@
 		border-radius: 2vw;
 		font-size: 5.228vw;
 		line-height: 2.768vw;
-    }
-    .displayButtons {
+	}
+	.displayButtons {
 		width: 50vw;
 		height: 7vw;
 		margin-top: 20vw;
@@ -80,31 +80,31 @@
 		margin-left: 3vw;
 	}
 	.startButton {
-		height: 6vw;
-		width: 6vw;
+		height: 4vw;
+		width: 4vw;
 		border-radius: 6vw;
-		margin-left: 2.7vw;
-		margin-top: -0.75vw;
+		margin-left: 3.5vw;
+		margin-top: -0.25vw;
 		top: 0vw;
-		border-width: 0.5vw;
+		border-width: 0.8vw;
 	}
 	.strictChecker {
-		height: 1.5vw;
-		width: 1.5vw;
+		height: 1.2vw;
+		width: 1.2vw;
 		border-radius: 1.5vw;
-		margin-top: -3vw;
-		margin-left: 5vw;
-		border-width: 0.23vw;
+		margin-top: -2.4vw;
+		margin-left: 6vw;
+		border-width: 0.15vw;
 	}
 
 	.strictButton {
-		height: 6vw;
-		width: 6vw;
+		height: 4vw;
+		width: 4vw;
 		border-radius: 6vw;
-		margin-left:3vw;
+		margin-left:3.9vw;
 		margin-top: 0.6vw;
 		top: 0;
-		border-width: 0.5vw;
+		border-width: 0.8vw;
 	}
 
 	.labels {
@@ -119,25 +119,25 @@
 		font-size: 2.2vw;
 	}
 	.lb22 {
-		margin-left: 11vw;
+		margin-left: 11.8vw;
 		font-size: 2.2vw;
 	}
 	.lb23 {
-		margin-left: 16.5vw;
+		margin-left: 16vw;
 		font-size: 2.2vw;
 	}
 	.switchOnOff {
-		height: 3.5vw;
-		width: 3.5vw;
+		height: 3.2vw;
+		width: 3.2vw;
 		border-radius: 0.307vw;
-		margin-left: 0.2vw;
-		margin-top: 0.1vw;
+		margin-left: 0.35vw;
+		margin-top: 0.2vw;
 		top: 0.768vw;
 		border-width: 0.153vw;
 	}
 
 	.switchOnOff.move {
-		margin-left: 4.2vw;
+		margin-left: 4.4vw;
 	}
 
 	.switchContainer {
@@ -148,7 +148,8 @@
 	}
 
 	.switchPara {
-		margin-left: 1vw;
+		margin-left: 1.4vw;
+		margin-right: 0.8vw;
 		width: 8vw;
 		height: 3.8vw;
 		border-radius: 0.23vw;

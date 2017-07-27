@@ -49,6 +49,7 @@ Game.prototype.initialize=function(){
 Game.prototype.clearTimers=function(){
 	var len=this.timerEvents.length;
 	clearTimeout(this.startTimer);
+	clearTimeout(this.userTimer);
 	for(var i=0;i<len;i++){
 		clearTimeout(this.timerEvents[i]);
 	}

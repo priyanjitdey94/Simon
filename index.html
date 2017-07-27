@@ -19,18 +19,34 @@ Developed By : Priyanjit Dey
 	<link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=VT323" rel="stylesheet">
 	
-	<audio id="soundbutton0" src="./assets/audio/simonSound0.ogg"></audio>
-	<audio id="soundbutton1" src="./assets/audio/simonSound1.ogg"></audio>
-	<audio id="soundbutton2" src="./assets/audio/simonSound2.ogg"></audio>
-	<audio id="soundbutton3" src="./assets/audio/simonSound3.ogg"></audio>
-	<audio id="soundbuttonWrong" src="./assets/audio/buzz_sound.ogg"></audio>
+	<audio id="soundbutton0">
+		<source src="./assets/audio/simonSound0.ogg" type="audio/ogg">
+		<source src="./assets/audio/simonSound0.mp3" type="audio/mp3">
+	</audio>
+	<audio id="soundbutton1">
+		<source src="./assets/audio/simonSound1.ogg" type="audio/ogg">
+		<source src="./assets/audio/simonSound1.mp3" type="audio/mp3">
+	</audio>
+	<audio id="soundbutton2">
+		<source src="./assets/audio/simonSound3.ogg" type="audio/ogg">
+		<source src="./assets/audio/simonSound3.mp3" type="audio/mp3">
+	</audio>
+	<audio id="soundbutton3">
+		<source src="./assets/audio/simonSound3.ogg" type="audio/ogg">
+		<source src="./assets/audio/simonSound3.mp3" type="audio/mp3">
+	</audio>
+
+	<audio id="soundbuttonWrong">
+		<source src="./assets/audio/buzz_sound.ogg" type="audio/ogg">
+		<source src="./assets/audio/buzz_sound.mp3" type="audio/mp3">
+	</audio>
 
 	<link rel="stylesheet" type="text/css" href="./css/styleDesktop.css">
 	<link rel="stylesheet" type="text/css" href="./css/styleTab.css">
 	<link rel="stylesheet" type="text/css" href="./css/styleMobile.css">
 	
 </head>
-<body width="700px" height="700px" onload="createEventListener()">
+<body onload="createEventListener()">
 	<div id="container" position="relative" >
 		<div id="buttons">
 			<div class="row">

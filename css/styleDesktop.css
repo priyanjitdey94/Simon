@@ -25,6 +25,7 @@ body {
 	position: absolute;
 	top: 50%;
 	transform: translateY(-50%);
+	min-width:200px; 
 }
 
 .row {
@@ -108,14 +109,10 @@ button::-moz-focus-inner {
 	top: 50%;
 	left: 8vw;
 	transform: translateY(-50%);
-	/*top: 15.486vh;
-	left: 4.996vw;*/
 	display: block;
-	background: #ffffff;
+	background: #efefef;
 	border-radius: 16.525vw;
 	border: 0.922vw solid #1a1b1c;
-	/*margin-left: 34.588vw;
-	margin-top: 7.686vw;*/
 }
 
 .h1text {
@@ -125,7 +122,6 @@ button::-moz-focus-inner {
 	height: 5.38vw;
 	font-family: "Alfa Slab One";
 	font-weight: 400;
-
 }
 
 .trademark {
@@ -166,44 +162,51 @@ button::-moz-focus-inner {
 	margin-left: 0.384vw;
 }
 .startButton {
-	height: 2.2vw;
-	width: 2.2vw;
+	height: 1.8vw;
+	width: 1.8vw;
 	border-radius: 2.2vw;
 	margin-left: 1.3vw;
 	margin-top: 0.42vw;
 	top: 0.768vw;
 	background-color: #d80a0a;
-	border: 0.23vw solid #302f2f;
+	border: 0.4vw solid #302f2f;
 	box-shadow: 0 0 0.768vw #171819;
 }
 
+.startButton:active {
+	margin-top: 1vw;
+}
+
 .strictChecker {
-	height: 0.3vw;
-	width: 0.3vw;
+	height: 0.4vw;
+	width: 0.4vw;
 	border-radius: 0.768vw;
 	background-color: #302f2f;
 	margin-top: -0.614vw;
 	margin-left: 2.3vw;
-	border: 0.23vw solid #302f2f;
+	border: 0.15vw solid #302f2f;
 	border-color: #302f2f; 
 }
 
 .strictChecker.active {
 	background-color: #ea0707;
 	border-color: #302f2f;
-	border-width: 0.23vw;
+	border-width: 0.15vw;
 }
 
 .strictButton {
-	height: 2.2vw;
-	width: 2.2vw;
+	height: 1.8vw;
+	width: 1.8vw;
 	border-radius: 2.2vw;
 	margin-left: 1.4vw;
 	margin-top: 0.307vw;
 	top: 0.768vw;
 	background-color: #fff607;
-	border: 0.23vw solid #302f2f;
-	box-shadow: 0 0 0.768vw #171819;
+	border: 0.4vw solid #302f2f;
+	box-shadow: 0 0 0.9vw #171819;
+}
+.strictButton:active{
+	margin-top: 1vw;
 }
 
 .indiLabel {
@@ -254,6 +257,7 @@ button::-moz-focus-inner {
 	margin-left: 1.152vw;
 	font-family: "Oswald";
 	font-size: 0.999vw;
+	font-weight: 100;
 	/*font-weight: 10px;*/
 }
 .lb22 {
@@ -262,6 +266,7 @@ button::-moz-focus-inner {
 	margin-left: 0.922vw;
 	font-family: "Oswald";
 	font-size: 0.999vw;
+	font-weight: 100;
 	/*font-weight: 10px;*/
 }
 .lb23 {
@@ -269,17 +274,18 @@ button::-moz-focus-inner {
 	text-align: left;
 	margin-left: 0.922vw;
 	font-family: "Oswald";
+	font-weight: 100;
 	font-size: 0.999vw;
 	/*font-weight: 10px;*/
 }
 
 
 .switchOnOff {
-	height: 1.537vw;
-	width: 1.537vw;
-	border-radius: 0.307vw;
-	margin-left: 0.1vw;
-	margin-top: 0.1vw;
+	height: 1.4vw;
+	width: 1.4vw;
+	border-radius: 0.2vw;
+	margin-left: 0.17vw;
+	margin-top: 0.15vw;
 	top: 0.768vw;
 	background-color: #297be8;
 	border-width: 0.153vw;
@@ -288,21 +294,21 @@ button::-moz-focus-inner {
 }
 
 .switchOnOff.move {
-	margin-left: 1.767vw;
+	margin-left: 1.85vw;
 }
 
 .switchContainer {
 	width: 9vw;
 	height: 1.921vw;
-	margin-left: 4.458vw;
+	margin-left: 4.6vw;
 	margin-top: 0.768vw;
 }
 
 .switchPara {
 	margin-left: 0.384vw;
 	width: 3.458vw;
-	height: 1.8vw;
-	background-color: #404347;
+	height: 1.7vw;
+	background-color: #211f1f;
 	border-radius: 0.23vw;
 	float: left;
 }
@@ -313,8 +319,8 @@ button::-moz-focus-inner {
 	width: 1.537vw;
 	padding-right: 0;
 	float: left;
-	font-size: 1.076vw;
-	font-weight: 0.768vw;
+	font-size: 1vw;
+	font-weight: 100;
 }
 
 

@@ -15,7 +15,7 @@ var GameObject=function(bId,bgC,bgCL){
 	this.id=bId;
 	this.bgColor=bgC;
 	this.bgColorLight=bgCL;
-}
+};
 
 /*
 * Function 	: display
@@ -26,11 +26,10 @@ GameObject.prototype.display=function(){
 	simon.disableControl(true);
 	
 	var localThisObject=this;
-	var localDocument=document.getElementById('bt'+localThisObject.id);
-	var localAudio=document.getElementById('soundbutton'+localThisObject.id);
+	var localDocument=document.getElementById("bt"+localThisObject.id);
+	var localAudio=document.getElementById("soundbutton"+localThisObject.id);
 
 	localThisObject.displayTimer=setTimeout(function(){
-		//localDocument.style.opacity=0.6;
 		localDocument.style.backgroundColor=localThisObject.bgColorLight;
 		localAudio.play();
 	},100);
@@ -38,7 +37,7 @@ GameObject.prototype.display=function(){
 		localDocument.style.backgroundColor=localThisObject.bgColor;
 		localThisObject.check();
 	},200);
-}
+};
 
 /*
 * Function 	: check
@@ -58,15 +57,15 @@ GameObject.prototype.check=function(){
 			simon.waitForUser();
 		}
 	}else{
-		document.getElementById('soundbuttonWrong').play();
+		document.getElementById("soundbuttonWrong").play();
 		if(simon.isStrict===1){
 			simon.showExclamation("!!",1);
 		}else{
 			simon.moveNum=0;
-			simon.showExclamation("!!",2)
+			simon.showExclamation("!!",2);
 		}
 	}
-}
+};
 
 //*********************************************************//
 

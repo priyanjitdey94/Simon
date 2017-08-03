@@ -6,7 +6,7 @@ module.exports = function(config) {
   config.set({
 
     // base path that will be used to resolve all patterns (eg. files, exclude)
-    basePath: '',
+    basePath: './',
 
 
     // frameworks to use
@@ -17,7 +17,10 @@ module.exports = function(config) {
     // list of files / patterns to load in the browser
     files: [
     'js/*.js',
-    'test/*.js',
+    'test/game.test.js',
+    'test/gameObject.test.js',
+    'test/eventHandler.test.js',
+    'index.html'
     ],
 
 
@@ -36,9 +39,16 @@ module.exports = function(config) {
     // test results reporter to use
     // possible values: 'dots', 'progress'
     // available reporters: https://npmjs.org/browse/keyword/karma-reporter
-    reporters: ['progress','coverage'],
+    reporters: ['progress','coverage','html'],
 
-
+    htmlReporter: {
+        outputFile: 'test/units.html',
+        pageTitle: 'Unit Tests',
+        subPageTitle: 'A sample project description',
+        groupSuites: true,
+        useCompactStyle: true,
+        useLegacyStyle: true
+    },
     // web server port
     port: 9876,
 
@@ -58,8 +68,8 @@ module.exports = function(config) {
 
     // start these browsers
     // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
+    //browsers: ['Chrome'],
     browsers: ['PhantomJS'],
-
 
     // Continuous Integration mode
     // if true, Karma captures browsers, runs the tests and exits

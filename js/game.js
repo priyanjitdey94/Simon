@@ -14,9 +14,8 @@
  * @moveNum  : Keep track of user input
  * @timerEvents  : Store all setTimeout calls.
  * @userTimer    : Wait for user response.
- * @startTimer   : Timer for start button.   
  */
-var Game = function() {
+var Game = function () {
   this.onOff = 0;
   this.isStrict = 0;
 
@@ -27,37 +26,45 @@ var Game = function() {
   this.timerEvents = [];
   this.blinkEvents = [];
   this.userTimer = 0;
-  this.startTimer = 0;
-}
+};
 
 /*
  * Function  : initialize
  * Arguements    : None  
  * Purpose   : Reset everything
  */
-Game.prototype.initialize = function() {
-  this.onOff = 0;
-  this.isStrict = 0;
+Game.prototype.reset = function (_onOff, _isStrict, _sequence, _seqIterator, _moveNum, _timerEvents, _blinkEvents, _userTimer) {
+  this.onOff = _onOff;
+  this.isStrict = _isStrict;
 
+  this.sequence = _sequence;
+  this.seqIterator = _seqIterator;
+  this.moveNum = _moveNum;
+
+  this.timerEvents = _timerEvents;
+  this.blinkEvents = _blinkEvents;
+  this.userTimer = _userTimer;
+  return [this.onOff, this.isStrict, this.sequence, this.seqIterator, this.moveNum, this.timerEvents, this.blinkEvents, this.userTimer];
+};
+Game.prototype.initialize = function () {
   this.sequence = [];
   this.seqIterator = 0;
   this.moveNum = 0;
 
-  this.timerEvents = [];
-  this.blinkEvents = [];
-  this.userTimer = 0;
-  this.startTimer = 0;
-}
+  return [this.sequence, this.seqIterator, this.moveNum];
+};
 
 /*
  * Function  : clearTimers
  * Arguements    : None
  * Purpose   : Clear all setTimeouts
  */
-Game.prototype.clearTimers = function() {
-  var len = this.timerEvents.length,
-    i;
-  clearTimeout(this.startTimer);
+Game.prototype.clearTimers = function (_len) {
+  var len = this.timerEvents.length;
+  var i;
+  if (_len !== undefined && (_len >= 0)) {
+    len = _len;
+  }
   clearTimeout(this.userTimer);
   for (i = 0; i < len; i++) {
     clearTimeout(this.timerEvents[i]);
@@ -66,20 +73,25 @@ Game.prototype.clearTimers = function() {
   for (i = 0; i < len; i++) {
     clearTimeout(this.blinkEvents[i]);
   }
-}
+};
 
 /*
  * Function  : switchGame
  * Arguements    : None
  * Purpose   : Turn game on/off
  */
-Game.prototype.switchGame = function() {
+Game.prototype.switchGame = function (_onOff, _isStrict) {
+  if (_onOff !== undefined && _isStrict !== undefined) {
+    this.onOff = _onOff;
+    this.isStrict = _isStrict;
+  }
+
   this.disableControl(true);
   if (this.onOff === 0) {
     this.onOff = 1;
-    document.getElementById("ledtext").style.color = "#ea0707";
-    document.getElementById("startB").disabled = false;
-    document.getElementById("sOnOff").className += " move";
+    document.getElementById('ledtext').style.color = '#ea0707';
+    document.getElementById('startB').disabled = false;
+    document.getElementById('sOnOff').className += ' move';
   } else {
     this.onOff = 0;
     this.clearTimers();
@@ -87,30 +99,41 @@ Game.prototype.switchGame = function() {
       this.toggleStrictMode();
     }
     var localThisObject = this;
-    setTimeout(function() {
+    setTimeout(function () {
       localThisObject.initialize();
     }, 300);
-    document.getElementById("ledtext").innerHTML = "--";
-    document.getElementById("ledtext").style.color = "#631313";
-    document.getElementById("sOnOff").className = "switchOnOff";
+    document.getElementById('ledtext').innerHTML = '--';
+    document.getElementById('ledtext').style.color = '#631313';
+    document.getElementById('sOnOff').className = 'switchOnOff';
   }
-}
+
+  return [this.onOff,
+    document.getElementById('ledtext').innerHTML,
+    document.getElementById('ledtext').style.color,
+    document.getElementById('sOnOff').className
+  ];
+};
 
 /*
  * Function  : toggleStrictMode
  * Arguements    : None
  * Purpose   : Toggle strict mode.
  */
-Game.prototype.toggleStrictMode = function() {
+Game.prototype.toggleStrictMode = function (mode) {
+  if (mode !== undefined) {
+    this.isStrict = mode;
+  }
+
   if (this.isStrict === 0) {
     this.isStrict = 1;
-    document.getElementById("strictCheckerB").className += " active";
+    document.getElementById('strictCheckerB').className += ' active';
   } else {
     this.isStrict = 0;
-    document.getElementById("strictCheckerB").className = "strictChecker";
+    document.getElementById('strictCheckerB').className = 'strictChecker';
   }
-  return this.isStrict;
-}
+
+  return [this.isStrict, document.getElementById('strictCheckerB').className];
+};
 
 /*
  * Function  : disableControl
@@ -118,11 +141,11 @@ Game.prototype.toggleStrictMode = function() {
  *         - @status : boolean, sets button on/off   
  * Purpose   : Disables/Enables button
  */
-Game.prototype.disableControl = function(status) {
+Game.prototype.disableControl = function (status) {
   for (var i = 0; i < 4; i++) {
-    document.getElementById("bt" + i).disabled = status;
+    document.getElementById('bt' + i).disabled = status;
   }
-}
+};
 
 /*
  * Function  : showExclamation
@@ -131,31 +154,33 @@ Game.prototype.disableControl = function(status) {
  *         - @type: integer, the mode in which @startSequence should be invoked.
  * Purpose   : Displays given text and invokes startSequence function in mentioned mode.
  */
-Game.prototype.showExclamation = function(str, type) {
-  var localThisObject = this; //to store the this context
-  this.disableControl(true);
-  document.getElementById("ledtext").innerHTML = str;
+Game.prototype.showExclamation = function (str, type) {
+  if (type < 0 || type > 2 || typeof str !== 'string' || str.length > 2) {
+    return 'Incorrect arg';
+  }
 
-  var t1 = setTimeout(function() {
-    document.getElementById("ledtext").style.color = "#631313";
+  var localThisObject = this; // to store the this context
+  this.disableControl(true);
+  document.getElementById('ledtext').innerHTML = str;
+
+  var t1 = setTimeout(function () {
+    document.getElementById('ledtext').style.color = '#631313';
   }, 100);
-  var t2 = setTimeout(function() {
-    document.getElementById("ledtext").style.color = "#ea0707";
+  var t2 = setTimeout(function () {
+    document.getElementById('ledtext').style.color = '#ea0707';
   }, 300);
-  var t3 = setTimeout(function() {
-    document.getElementById("ledtext").style.color = "#631313";
+  var t3 = setTimeout(function () {
+    document.getElementById('ledtext').style.color = '#631313';
   }, 500);
-  var t4 = setTimeout(function() {
-    document.getElementById("ledtext").style.color = "#ea0707";
+  var t4 = setTimeout(function () {
+    document.getElementById('ledtext').style.color = '#ea0707';
     localThisObject.startSequence(type);
   }, 700);
   this.blinkEvents.push(t1);
   this.blinkEvents.push(t2);
   this.blinkEvents.push(t3);
   this.blinkEvents.push(t4);
-}
-
-
+};
 
 /*
  * Function  : startSequence
@@ -167,7 +192,7 @@ Game.prototype.showExclamation = function(str, type) {
  * 1 : Strict Mode. Empty the array. Add number. Display
  * 2 : Repeat Mode. Only Display.
  */
-Game.prototype.startSequence = function(seq) {
+Game.prototype.startSequence = function (seq) {
   this.disableControl(true);
   if (seq === 0) {
     this.sequence.push(Math.floor(Math.random() * 4));
@@ -179,99 +204,117 @@ Game.prototype.startSequence = function(seq) {
   } else if (seq === 2) {
     this.display();
   }
-}
+
+  return [this.sequence.length,
+    this.seqIterator
+  ];
+};
 
 /*
  * Function  : display
  * Arguements    : None
  * Purpose   : Driver function to visualize the sequence
  */
-Game.prototype.display = function() {
-  //console.log("display");
-  document.getElementById("ledtext").innerHTML = (this.seqIterator < 10 ? "0" + this.seqIterator : this.seqIterator);
+Game.prototype.display = function (_seqIterator) {
+  if (_seqIterator !== undefined) {
+    this.seqIterator = _seqIterator;
+  }
+  if (_seqIterator < 0 || _seqIterator > 20) {
+    return 'Incorrect arg';
+  }
+
+  document.getElementById('ledtext').innerHTML = (this.seqIterator < 10 ? '0' + this.seqIterator : this.seqIterator);
   for (var i = 0; i < this.seqIterator; i++) {
     this.displayHelper(i, this.sequence[i], 600);
   }
-}
+};
 
 /*
  * Function  : displayHelper
  * Arguements    : None
  * Purpose   : Helper function to  create visualiztion of each button
  */
-Game.prototype.displayHelper = function(j, id, offset) {
+Game.prototype.displayHelper = function (j, id, offset, _seqIterator) {
+  if (j < 0 || id < 0 || id > 3 || offset < 600) {
+    return 'Incorrect arg';
+  }
+  if (_seqIterator !== undefined) {
+    this.seqIterator = _seqIterator;
+  }
+
   var localThisObject = this;
-  var localDocument = document.getElementById("bt" + id);
+  var localDocument = document.getElementById('bt' + id);
   var t1;
 
-  t1 = setTimeout(function() {
+  t1 = setTimeout(function () {
     switch (id) {
       case 0:
-        localDocument.style.backgroundColor = "#89ed91";
+        localDocument.style.backgroundColor = '#89ed91';
         break;
       case 1:
-        localDocument.style.backgroundColor = "#ef8686";
+        localDocument.style.backgroundColor = '#ef8686';
         break;
       case 2:
-        localDocument.style.backgroundColor = "#f4ed89";
+        localDocument.style.backgroundColor = '#f4ed89';
         break;
       case 3:
-        localDocument.style.backgroundColor = "#6d75ed";
+        localDocument.style.backgroundColor = '#6d75ed';
         break;
     }
-    document.getElementById("soundbutton" + id).play();
+    // document.getElementById('soundbutton' + id).play();
 
-    setTimeout(function() {
+    setTimeout(function () {
       switch (id) {
         case 0:
-          localDocument.style.backgroundColor = "#00BA47";
+          localDocument.style.backgroundColor = '#00BA47';
           break;
         case 1:
-          localDocument.style.backgroundColor = "#A50000";
+          localDocument.style.backgroundColor = '#A50000';
           break;
         case 2:
-          localDocument.style.backgroundColor = "#C6B800";
+          localDocument.style.backgroundColor = '#C6B800';
           break;
         case 3:
-          localDocument.style.backgroundColor = "#302293";
+          localDocument.style.backgroundColor = '#302293';
           break;
       }
       if (j === localThisObject.seqIterator - 1) {
-        document.getElementById("startB").disabled = false;
+        document.getElementById('startB').disabled = false;
         localThisObject.waitForUser();
       }
     }, 320);
   }, (j * 700) + offset);
   localThisObject.timerEvents.push(t1);
-}
+};
 
 /*
  * Function  : waitForUser
  * Arguements    : None
  * Purpose   : Checks response time of user. If exceeds, visualizes again.
  */
-Game.prototype.waitForUser = function() {
+Game.prototype.waitForUser = function () {
   this.disableControl(false);
   var localThisObject = this;
-  localThisObject.userTimer = setTimeout(function() {
+  localThisObject.userTimer = setTimeout(function () {
     localThisObject.disableControl(true);
     localThisObject.moveNum = 0;
-    localThisObject.showExclamation("!!", 2);
+    localThisObject.showExclamation('!!', 2);
   }, 10000);
-}
+};
 
 /*
  * Function  : start
  * Arguements    : None
  * Purpose   : Execution starts here.
  */
-Game.prototype.start = function() {
+Game.prototype.start = function () {
   document.getElementById('startB').disabled = true;
   this.disableControl(true);
   this.clearTimers();
   this.initialize();
   this.showExclamation('--', 1);
-}
+};
 //* *********************************************************************** *//
 
 var simon = new Game();
+simon.initialize();

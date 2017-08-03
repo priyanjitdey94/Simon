@@ -1,3 +1,9 @@
 module.exports = {
-    "extends": "standard"
+    "extends": "standard",
+    "rules": {
+    	"semi": [2,"always"]
+    },
+    "globals": {
+    	"simon":true
+    }
 };

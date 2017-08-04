@@ -20,9 +20,9 @@
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
-        <span class="strong">98.18% </span>
+        <span class="strong">98.21% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>54/55</span>
+        <span class='fraction'>55/56</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">93.75% </span>
@@ -35,9 +35,9 @@
         <span class='fraction'>7/7</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">98.18% </span>
+        <span class="strong">98.21% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>54/55</span>
+        <span class='fraction'>55/56</span>
       </div>
     </div>
   </div>
@@ -162,9 +162,9 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">2×</span>
-<span class="cline-any cline-yes">16×</span>
-<span class="cline-any cline-yes">16×</span>
-<span class="cline-any cline-yes">16×</span>
+<span class="cline-any cline-yes">20×</span>
+<span class="cline-any cline-yes">20×</span>
+<span class="cline-any cline-yes">20×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">2×</span>
@@ -204,36 +204,36 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">2×</span>
-<span class="cline-any cline-yes">7×</span>
-<span class="cline-any cline-yes">7×</span>
-<span class="cline-any cline-yes">6×</span>
-<span class="cline-any cline-yes">6×</span>
-<span class="cline-any cline-yes">6×</span>
-<span class="cline-any cline-yes">6×</span>
-<span class="cline-any cline-yes">119×</span>
-<span class="cline-any cline-yes">119×</span>
+<span class="cline-any cline-yes">11×</span>
+<span class="cline-any cline-yes">11×</span>
+<span class="cline-any cline-yes">10×</span>
+<span class="cline-any cline-yes">10×</span>
+<span class="cline-any cline-yes">10×</span>
+<span class="cline-any cline-yes">10×</span>
+<span class="cline-any cline-yes">199×</span>
+<span class="cline-any cline-yes">199×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">7×</span>
+<span class="cline-any cline-yes">11×</span>
+<span class="cline-any cline-yes">10×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">11×</span>
 <span class="cline-any cline-yes">6×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">7×</span>
-<span class="cline-any cline-yes">2×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">7×</span>
-<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-yes">11×</span>
+<span class="cline-any cline-yes">10×</span>
 <span class="cline-any cline-yes">1×</span>
-<span class="cline-any cline-yes">5×</span>
+<span class="cline-any cline-yes">9×</span>
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">4×</span>
-<span class="cline-any cline-yes">4×</span>
-<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-yes">8×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -272,11 +272,11 @@ var GameObject = function () {
   this.bgColorLight = null;
 };
 &nbsp;
-GameObject.prototype.initializeButton=function (id,color,colorLight) {
-  this.id=id;
-  this.bgColor=color;
-  this.bgColorLight=colorLight;
-}
+GameObject.prototype.initializeButton = function (id, color, colorLight) {
+  this.id = id;
+  this.bgColor = color;
+  this.bgColorLight = colorLight;
+};
 /*
 * Function  : display
 * Arguements    : None
@@ -290,7 +290,7 @@ GameObject.prototype.createFlash = function (tempObj) {
 &nbsp;
   setTimeout(function () {
     document.getElementById('bt' + localThisObject.id).style.backgroundColor = localThisObject.bgColorLight;
-    document.getElementById('soundbutton'+localThisObject.id).play();
+    document.getElementById('soundbutton' + localThisObject.id).play();
   }, 100);
   setTimeout(function () {
     document.getElementById('bt' + localThisObject.id).style.backgroundColor = localThisObject.bgColor;
@@ -338,7 +338,7 @@ GameObject.prototype.check = function (_obj, _sequence, _moveNum, _isStrict) {
       simon.waitForUser();
     }
   } else {
-    // document.getElementById('soundbuttonWrong').play();
+    document.getElementById('soundbuttonWrong').play();
     <span class="missing-if-branch" title="if path not taken" >I</span>if (simon.isStrict === 1) {
 <span class="cstat-no" title="statement not covered" >      simon.showExclamation('!!', 1);</span>
     } else {
@@ -364,7 +364,7 @@ button3.initializeButton(3, '#302293', '#6d75ed');
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Fri Aug 04 2017 10:43:56 GMT+0530 (IST)
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Fri Aug 04 2017 11:24:56 GMT+0530 (IST)
 </div>
 </div>
 <script src="../prettify.js"></script>

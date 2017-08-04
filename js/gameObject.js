@@ -83,7 +83,7 @@ GameObject.prototype.check = function (_obj, _sequence, _moveNum, _isStrict) {
       simon.waitForUser();
     }
   } else {
-    // document.getElementById('soundbuttonWrong').play();
+    document.getElementById('soundbuttonWrong').play();
     if (simon.isStrict === 1) {
       simon.showExclamation('!!', 1);
     } else {

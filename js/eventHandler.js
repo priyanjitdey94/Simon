@@ -6,52 +6,71 @@
 ************************************************/
 
 /*
-* Function 	: createEventListener
+* Function 	: 
 * Arguements 	: None
 * Purpose 	: click event listeners.
 */
 
-var createEventListener=function(){
-	document.getElementById('bt0').addEventListener('click',function(){
-		if(simon.onOff===1){
-			clearTimeout(simon.userTimer);
-			button0.display();
-		}
-	});
-	document.getElementById('bt1').addEventListener('click',function(){
-		if(simon.onOff===1){
-			clearTimeout(simon.userTimer);
-			button1.display();
-		}
-	});
-	document.getElementById('bt2').addEventListener('click',function(){
-		if(simon.onOff===1){
-			clearTimeout(simon.userTimer);
-			button2.display();
-		}
-	});
-	document.getElementById('bt3').addEventListener('click',function(){
-		if(simon.onOff===1){
-			clearTimeout(simon.userTimer);
-			button3.display();
-		}
-	});
-
-	document.getElementById('startB').addEventListener('click',function(){
-		if(simon.onOff===1){
-			clearTimeout(simon.userTimer);
-			simon.start();
-		}
-	});
-
-	document.getElementById('strictB').addEventListener('click',function(){
-		if(simon.onOff===1){
-			simon.toggleStrictMode();
-		}
-	});
-
-	document.getElementById('sOnOff').addEventListener('click',function(){
+var button0Call=function(_onOff){
+	if(_onOff!==undefined){
+		simon.onOff=_onOff;
+	}
+	if(simon.onOff===1){
 		clearTimeout(simon.userTimer);
-		simon.switchGame();
-	});
+		button0.display();
+	}
+}
+
+var button1Call=function(_onOff){
+	if(_onOff!==undefined){
+		simon.onOff=_onOff;
+	}
+	if(simon.onOff===1){
+		clearTimeout(simon.userTimer);
+		button1.display();
+	}
+}
+
+var button2Call=function(_onOff){
+	if(_onOff!==undefined){
+		simon.onOff=_onOff;
+	}
+	if(simon.onOff===1){
+		clearTimeout(simon.userTimer);
+		button2.display();
+	}
+}
+
+var button3Call=function(_onOff){
+	if(_onOff!==undefined){
+		simon.onOff=_onOff;
+	}
+	if(simon.onOff===1){
+		clearTimeout(simon.userTimer);
+		button3.display();
+	}
+}
+
+var startBCall=function(_onOff){
+	if(_onOff!==undefined){
+		simon.onOff=_onOff;
+	}
+	if(simon.onOff==1){
+		clearTimeout(simon.userTimer);
+		simon.start();
+	}
+}
+
+var strictBCall=function(_onOff){
+	if(_onOff!==undefined){
+		simon.onOff=_onOff;
+	}
+	if(simon.onOff===1){
+		simon.toggleStrictMode();
+	}
+}
+
+var sOnOffCall=function(){
+	clearTimeout(simon.userTimer);
+	simon.switchGame();
 }

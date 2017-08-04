@@ -11,10 +11,6 @@ Developed By : Priyanjit Dey
 	</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-	<script type="text/javascript" src="./js/game.js"></script>
-	<script type="text/javascript" src="./js/gameObject.js"></script>
-	<script type="text/javascript" src="./js/eventHandler.js"></script>
-	
 	<link href="https://fonts.googleapis.com/css?family=Alfa+Slab+One" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=VT323" rel="stylesheet">
@@ -41,21 +37,20 @@ Developed By : Priyanjit Dey
 		<source src="./assets/audio/buzz_sound.mp3" type="audio/mp3">
 	</audio>
 
-	<link rel="stylesheet" type="text/css" href="./css/styleDesktop.css">
-	<link rel="stylesheet" type="text/css" href="./css/styleTab.css">
-	<link rel="stylesheet" type="text/css" href="./css/styleMobile.css">
+	
 	
 </head>
-<body onload="createEventListener()">
+<body>  
+<!--<body onload="createEventListener()">-->
 	<div id="container" position="relative" >
 		<div id="buttons">
 			<div class="row">
-				<button id="bt0" class="btn1"></button>
-				<button id="bt1" class="btn2"></button>
+				<button id="bt0" class="btn1" onclick="button0Call()"></button>
+				<button id="bt1" class="btn2" onclick="button1Call()"></button>
 			</div>
 			<div class="row">
-				<button id="bt2" class="btn3"></button>
-				<button id="bt3" class="btn4"></button>
+				<button id="bt2" class="btn3" onclick="button2Call()"></button>
+				<button id="bt3" class="btn4" onclick="button3Call()"></button>
 			</div>
 			<div class="inner">
 				<div class="ledContainer">
@@ -66,13 +61,13 @@ Developed By : Priyanjit Dey
 						<button id="ledtext" class="led" disabled="true">--</button>
 					</div>
 					<div class="st">
-						<div id="startB" class="startButton"></div>
+						<div id="startB" class="startButton" onmousedown="startBCall()"></div>
 						
 					</div>
 					<div class="strictMode">
 						<div>
 							<div id="strictCheckerB" class="strictChecker"></div>
-							<div id="strictB" class="strictButton" ></div>
+							<div id="strictB" class="strictButton" onmousedown="strictBCall()"></div>
 						</div>
 					</div>
 				</div>
@@ -89,11 +84,17 @@ Developed By : Priyanjit Dey
 				</div>
 				<div class="switchContainer">
 					<div class="Off">OFF</div>
-					<div class="switchPara"><div id="sOnOff" class="switchOnOff"></button></div></div>
+					<div class="switchPara"><div id="sOnOff" class="switchOnOff" onmousedown="sOnOffCall()"></button></div></div>
 					<div class="Off">ON</div>
 				</div>
 			</div>
 		</div>
 	</div>
+	<script type="text/javascript" src="./js/game.js"></script>
+	<script type="text/javascript" src="./js/gameObject.js"></script>
+	<script type="text/javascript" src="./js/eventHandler.js"></script>
+	<link rel="stylesheet" type="text/css" href="./css/styleDesktop.css">
+	<link rel="stylesheet" type="text/css" href="./css/styleTab.css">
+	<link rel="stylesheet" type="text/css" href="./css/styleMobile.css">
 </body>
 </html>

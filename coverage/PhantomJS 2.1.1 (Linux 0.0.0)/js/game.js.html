@@ -1,0 +1,1025 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for js/game.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../prettify.css" />
+    <link rel="stylesheet" href="../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../index.html">all files</a> / <a href="index.html">js/</a> game.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">87.74% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>136/155</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">81.48% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>44/54</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">95.24% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>20/21</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">87.74% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>136/155</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line high'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218
+219
+220
+221
+222
+223
+224
+225
+226
+227
+228
+229
+230
+231
+232
+233
+234
+235
+236
+237
+238
+239
+240
+241
+242
+243
+244
+245
+246
+247
+248
+249
+250
+251
+252
+253
+254
+255
+256
+257
+258
+259
+260
+261
+262
+263
+264
+265
+266
+267
+268
+269
+270
+271
+272
+273
+274
+275
+276
+277
+278
+279
+280
+281
+282
+283
+284
+285
+286
+287
+288
+289
+290
+291
+292
+293
+294
+295
+296
+297
+298
+299
+300
+301
+302
+303
+304
+305
+306
+307
+308
+309
+310
+311
+312
+313
+314
+315
+316
+317
+318
+319
+320
+321</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">9×</span>
+<span class="cline-any cline-yes">9×</span>
+<span class="cline-any cline-yes">9×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">9×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-yes">43×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-yes">24×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">5×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">35×</span>
+<span class="cline-any cline-yes">140×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">10×</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-yes">5×</span>
+<span class="cline-any cline-yes">5×</span>
+<span class="cline-any cline-yes">5×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">9×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">9×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">7×</span>
+<span class="cline-any cline-yes">7×</span>
+<span class="cline-any cline-yes">34×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">40×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">39×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">39×</span>
+<span class="cline-any cline-yes">39×</span>
+<span class="cline-any cline-yes">39×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">39×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">39×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">5×</span>
+<span class="cline-any cline-yes">5×</span>
+<span class="cline-any cline-yes">5×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">/************************************************
+ * SIMON     - Memory game
+ * Developed by  - Priyanjit Dey
+ * Organization  - FusionCharts
+ *
+ ************************************************/
+&nbsp;
+/*
+ * CONSTRUCTOR   : GAME
+ * @onOff    : Game status
+ * @isStrict : Strict Mode status
+ * @sequence     : Memory sequence
+ * @seqIterator  : Iterator for sequence
+ * @moveNum  : Keep track of user input
+ * @timerEvents  : Store all setTimeout calls.
+ * @userTimer    : Wait for user response.
+ */
+var Game = function () {
+  this.onOff = 0;
+  this.isStrict = 0;
+&nbsp;
+  this.sequence = [];
+  this.seqIterator = 0;
+  this.moveNum = 0;
+&nbsp;
+  this.timerEvents = [];
+  this.blinkEvents = [];
+  this.userTimer = 0;
+};
+&nbsp;
+/*
+ * Function  : initialize
+ * Arguements    : None  
+ * Purpose   : Reset everything
+ */
+Game.prototype.reset = function (_onOff, _isStrict, _sequence, _seqIterator, _moveNum, _timerEvents, _blinkEvents, _userTimer) {
+  this.onOff = _onOff;
+  this.isStrict = _isStrict;
+&nbsp;
+  this.sequence = _sequence;
+  this.seqIterator = _seqIterator;
+  this.moveNum = _moveNum;
+&nbsp;
+  this.timerEvents = _timerEvents;
+  this.blinkEvents = _blinkEvents;
+  this.userTimer = _userTimer;
+  return [this.onOff, this.isStrict, this.sequence, this.seqIterator, this.moveNum, this.timerEvents, this.blinkEvents, this.userTimer];
+};
+Game.prototype.initialize = function () {
+  this.sequence = [];
+  this.seqIterator = 0;
+  this.moveNum = 0;
+&nbsp;
+  return [this.sequence, this.seqIterator, this.moveNum];
+};
+&nbsp;
+/*
+ * Function  : clearTimers
+ * Arguements    : None
+ * Purpose   : Clear all setTimeouts
+ */
+Game.prototype.clearTimers = function (_len) {
+  var len = this.timerEvents.length;
+  var i;
+  if (_len !== undefined &amp;&amp; (_len &gt;= 0)) {
+    len = _len;
+  }
+  clearTimeout(this.userTimer);
+  for (i = 0; i &lt; len; i++) {
+    clearTimeout(this.timerEvents[i]);
+  }
+  len = this.blinkEvents.length;
+  for (i = 0; i &lt; len; i++) {
+    clearTimeout(this.blinkEvents[i]);
+  }
+};
+&nbsp;
+/*
+ * Function  : switchGame
+ * Arguements    : None
+ * Purpose   : Turn game on/off
+ */
+Game.prototype.switchGame = function (_onOff, _isStrict) {
+  if (_onOff !== undefined &amp;&amp; _isStrict !== undefined) {
+    this.onOff = _onOff;
+    this.isStrict = _isStrict;
+  }
+&nbsp;
+  this.disableControl(true);
+  if (this.onOff === 0) {
+    this.onOff = 1;
+    document.getElementById('ledtext').style.color = '#ea0707';
+    document.getElementById('startB').disabled = false;
+    document.getElementById('sOnOff').className += ' move';
+  } else {
+    this.onOff = 0;
+    this.clearTimers();
+    if (this.isStrict === 1) {
+      this.toggleStrictMode();
+    }
+    var localThisObject = this;
+    setTimeout(function () {
+      localThisObject.initialize();
+    }, 300);
+    document.getElementById('ledtext').innerHTML = '--';
+    document.getElementById('ledtext').style.color = '#631313';
+    document.getElementById('sOnOff').className = 'switchOnOff';
+  }
+&nbsp;
+  return [this.onOff,
+    document.getElementById('ledtext').innerHTML,
+    document.getElementById('ledtext').style.color,
+    document.getElementById('sOnOff').className
+  ];
+};
+&nbsp;
+/*
+ * Function  : toggleStrictMode
+ * Arguements    : None
+ * Purpose   : Toggle strict mode.
+ */
+Game.prototype.toggleStrictMode = function (mode) {
+  if (mode !== undefined) {
+    this.isStrict = mode;
+  }
+&nbsp;
+  if (this.isStrict === 0) {
+    this.isStrict = 1;
+    document.getElementById('strictCheckerB').className += ' active';
+  } else {
+    this.isStrict = 0;
+    document.getElementById('strictCheckerB').className = 'strictChecker';
+  }
+&nbsp;
+  return [this.isStrict, document.getElementById('strictCheckerB').className];
+};
+&nbsp;
+/*
+ * Function  : disableControl
+ * Arguements    : 1
+ *         - @status : boolean, sets button on/off   
+ * Purpose   : Disables/Enables button
+ */
+Game.prototype.disableControl = function (status) {
+  for (var i = 0; i &lt; 4; i++) {
+    document.getElementById('bt' + i).disabled = status;
+  }
+};
+&nbsp;
+/*
+ * Function  : showExclamation
+ * Arguements    : 2
+ *         - @str : string, message to be displayed in the message box
+ *         - @type: integer, the mode in which @startSequence should be invoked.
+ * Purpose   : Displays given text and invokes startSequence function in mentioned mode.
+ */
+Game.prototype.showExclamation = function (str, type) {
+  if (type &lt; 0 || type &gt; 2 || typeof str !== 'string' || str.length &gt; 2) {
+    return 'Incorrect arg';
+  }
+&nbsp;
+  var localThisObject = this; // to store the this context
+  this.disableControl(true);
+  document.getElementById('ledtext').innerHTML = str;
+&nbsp;
+  var t1 = setTimeout(function () {
+    document.getElementById('ledtext').style.color = '#631313';
+  }, 100);
+  var t2 = setTimeout(function () {
+    document.getElementById('ledtext').style.color = '#ea0707';
+  }, 300);
+  var t3 = setTimeout(function () {
+    document.getElementById('ledtext').style.color = '#631313';
+  }, 500);
+  var t4 = setTimeout(function () {
+    document.getElementById('ledtext').style.color = '#ea0707';
+    localThisObject.startSequence(type);
+  }, 700);
+  this.blinkEvents.push(t1);
+  this.blinkEvents.push(t2);
+  this.blinkEvents.push(t3);
+  this.blinkEvents.push(t4);
+};
+&nbsp;
+/*
+ * Function  : startSequence
+ * Arguements    : 1
+ *         - @seq : Mode 
+ * Purpose   : Creates sequence in given mode
+ ***Modes***
+ * 0 : Normal Mode. Add a number and display
+ * 1 : Strict Mode. Empty the array. Add number. Display
+ * 2 : Repeat Mode. Only Display.
+ */
+Game.prototype.startSequence = function (seq) {
+  this.disableControl(true);
+  if (seq === 0) {
+    this.sequence.push(Math.floor(Math.random() * 4));
+    this.seqIterator++;
+    this.display();
+  } else if (seq === 1) {
+    this.initialize();
+    this.startSequence(0);
+  } else <span class="missing-if-branch" title="else path not taken" >E</span>if (seq === 2) {
+    this.display();
+  }
+&nbsp;
+  return [this.sequence.length,
+    this.seqIterator
+  ];
+};
+&nbsp;
+/*
+ * Function  : display
+ * Arguements    : None
+ * Purpose   : Driver function to visualize the sequence
+ */
+Game.prototype.display = function (_seqIterator) {
+  if (_seqIterator !== undefined) {
+    this.seqIterator = _seqIterator;
+  }
+  if (_seqIterator &lt; 0 || _seqIterator &gt; 20) {
+    return 'Incorrect arg';
+  }
+&nbsp;
+  document.getElementById('ledtext').innerHTML = (this.seqIterator &lt; 10 ? '0' + this.seqIterator : this.seqIterator);
+  for (var i = 0; i &lt; this.seqIterator; i++) {
+    this.displayHelper(i, this.sequence[i], 600);
+  }
+};
+&nbsp;
+/*
+ * Function  : displayHelper
+ * Arguements    : None
+ * Purpose   : Helper function to  create visualiztion of each button
+ */
+Game.prototype.displayHelper = function (j, id, offset, _seqIterator) {
+  if (j &lt; 0 || id &lt; 0 || id &gt; 3 || offset &lt; 600) {
+    return 'Incorrect arg';
+  }
+  if (_seqIterator !== undefined) {
+    this.seqIterator = _seqIterator;
+  }
+&nbsp;
+  var localThisObject = this;
+  var localDocument = document.getElementById('bt' + id);
+  var t1;
+&nbsp;
+  t1 = setTimeout(function () {
+    switch (id) {
+      case 0:
+        localDocument.style.backgroundColor = '#89ed91';
+        break;
+<span class="branch-1 cbranch-no" title="branch not covered" >      case 1:</span>
+<span class="cstat-no" title="statement not covered" >        localDocument.style.backgroundColor = '#ef8686';</span>
+<span class="cstat-no" title="statement not covered" >        break;</span>
+<span class="branch-2 cbranch-no" title="branch not covered" >      case 2:</span>
+<span class="cstat-no" title="statement not covered" >        localDocument.style.backgroundColor = '#f4ed89';</span>
+<span class="cstat-no" title="statement not covered" >        break;</span>
+<span class="branch-3 cbranch-no" title="branch not covered" >      case 3:</span>
+<span class="cstat-no" title="statement not covered" >        localDocument.style.backgroundColor = '#6d75ed';</span>
+<span class="cstat-no" title="statement not covered" >        break;</span>
+    }
+    document.getElementById('soundbutton' + id).play();
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    setTimeout(<span class="fstat-no" title="function not covered" >function () {</span></span>
+<span class="cstat-no" title="statement not covered" >      switch (id) {</span>
+        case 0:
+<span class="cstat-no" title="statement not covered" >          localDocument.style.backgroundColor = '#00BA47';</span>
+<span class="cstat-no" title="statement not covered" >          break;</span>
+        case 1:
+<span class="cstat-no" title="statement not covered" >          localDocument.style.backgroundColor = '#A50000';</span>
+<span class="cstat-no" title="statement not covered" >          break;</span>
+        case 2:
+<span class="cstat-no" title="statement not covered" >          localDocument.style.backgroundColor = '#C6B800';</span>
+<span class="cstat-no" title="statement not covered" >          break;</span>
+        case 3:
+<span class="cstat-no" title="statement not covered" >          localDocument.style.backgroundColor = '#302293';</span>
+<span class="cstat-no" title="statement not covered" >          break;</span>
+      }
+<span class="cstat-no" title="statement not covered" >      if (j === localThisObject.seqIterator - 1) {</span>
+<span class="cstat-no" title="statement not covered" >        document.getElementById('startB').disabled = false;</span>
+<span class="cstat-no" title="statement not covered" >        localThisObject.waitForUser();</span>
+      }
+    }, 320);
+  }, (j * 700) + offset);
+  localThisObject.timerEvents.push(t1);
+};
+&nbsp;
+/*
+ * Function  : waitForUser
+ * Arguements    : None
+ * Purpose   : Checks response time of user. If exceeds, visualizes again.
+ */
+Game.prototype.waitForUser = function () {
+  this.disableControl(false);
+  var localThisObject = this;
+  localThisObject.userTimer = setTimeout(function () {
+    localThisObject.disableControl(true);
+    localThisObject.moveNum = 0;
+    localThisObject.showExclamation('!!', 2);
+  }, 10000);
+};
+&nbsp;
+/*
+ * Function  : start
+ * Arguements    : None
+ * Purpose   : Execution starts here.
+ */
+Game.prototype.start = function () {
+  document.getElementById('startB').disabled = true;
+  this.disableControl(true);
+  this.clearTimers();
+  this.initialize();
+  this.showExclamation('--', 1);
+};
+//* *********************************************************************** *//
+&nbsp;
+var simon = new Game();
+simon.initialize();
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Fri Aug 04 2017 10:39:44 GMT+0530 (IST)
+</div>
+</div>
+<script src="../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../sorter.js"></script>
+</body>
+</html>

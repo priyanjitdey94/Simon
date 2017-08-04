@@ -26,6 +26,7 @@ var Game = function () {
   this.timerEvents = [];
   this.blinkEvents = [];
   this.userTimer = 0;
+  this.sTimer = 0;
 };
 
 /*
@@ -66,6 +67,7 @@ Game.prototype.clearTimers = function (_len) {
     len = _len;
   }
   clearTimeout(this.userTimer);
+  clearTimeout(this.sTimer);
   for (i = 0; i < len; i++) {
     clearTimeout(this.timerEvents[i]);
   }
@@ -246,7 +248,7 @@ Game.prototype.displayHelper = function (j, id, offset, _seqIterator) {
   var localDocument = document.getElementById('bt' + id);
   var t1;
 
-  t1 = setTimeout(function () {
+  this.sTimer = setTimeout(function () {
     switch (id) {
       case 0:
         localDocument.style.backgroundColor = '#89ed91';

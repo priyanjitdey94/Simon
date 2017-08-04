@@ -37,7 +37,27 @@ describe('game',function(){
 			'<div class="Off">OFF</div>'+
 			'<div class="switchPara"><div id="sOnOff" class="switchOnOff"></button></div></div>'+
 			'<div class="Off">ON</div>'+
-			'</div></div></div></div>';
+			'</div></div></div></div>'+
+			'<audio id="soundbutton0">'+
+			'<source src="../assets/audio/simonSound0.ogg" type="audio/ogg">'+
+			'<source src="../assets/audio/simonSound0.mp3" type="audio/mp3">'+
+			'</audio>'+
+			'<audio id="soundbutton1">'+
+			'<source src="../assets/audio/simonSound1.ogg" type="audio/ogg">'+
+			'<source src="../assets/audio/simonSound1.mp3" type="audio/mp3">'+
+			'</audio>'+
+			'<audio id="soundbutton2">'+
+			'<source src="../assets/audio/simonSound3.ogg" type="audio/ogg">'+
+			'<source src="../assets/audio/simonSound3.mp3" type="audio/mp3">'+
+			'</audio>'+
+			'<audio id="soundbutton3">'+
+			'<source src="../assets/audio/simonSound3.ogg" type="audio/ogg">'+
+			'<source src="../assets/audio/simonSound3.mp3" type="audio/mp3">'+
+			'</audio>'+
+			'<audio id="soundbuttonWrong">'+
+			'<source src="../assets/audio/buzz_sound.ogg" type="audio/ogg">'+
+			'<source src="../assets/audio/buzz_sound.mp3" type="audio/mp3">'+
+			'</audio>';
 
 		document.body.insertAdjacentHTML('afterbegin',tempHtml);
 	});

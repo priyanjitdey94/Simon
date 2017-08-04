@@ -11,12 +11,17 @@
 * @bgColor  : default color of button 
 * @bgColorLight : Color when blinking
 */
-var GameObject = function (bId, bgC, bgCL) {
-  this.id = bId;
-  this.bgColor = bgC;
-  this.bgColorLight = bgCL;
+var GameObject = function () {
+  this.id = 0;
+  this.bgColor = null;
+  this.bgColorLight = null;
 };
 
+GameObject.prototype.initializeButton = function (id, color, colorLight) {
+  this.id = id;
+  this.bgColor = color;
+  this.bgColorLight = colorLight;
+};
 /*
 * Function  : display
 * Arguements    : None
@@ -30,6 +35,7 @@ GameObject.prototype.createFlash = function (tempObj) {
 
   setTimeout(function () {
     document.getElementById('bt' + localThisObject.id).style.backgroundColor = localThisObject.bgColorLight;
+    document.getElementById('soundbutton' + localThisObject.id).play();
   }, 100);
   setTimeout(function () {
     document.getElementById('bt' + localThisObject.id).style.backgroundColor = localThisObject.bgColor;
@@ -40,20 +46,6 @@ GameObject.prototype.createFlash = function (tempObj) {
 GameObject.prototype.display = function () {
   simon.disableControl(true);
   this.createFlash();
-  // var localThisObject=this;
-  // var localDocument=document.getElementById('bt'+localThisObject.id);
-  // var localAudio=document.getElementById('soundbutton'+localThisObject.id);
-  /*
-    localThisObject.displayTimer=setTimeout(function(){
-        //localDocument.style.opacity=0.6;
-        localDocument.style.backgroundColor=localThisObject.bgColorLight;
-        localAudio.play();
-    },100);
-    localThisObject.displayTimer2=setTimeout(function(){
-        localDocument.style.backgroundColor=localThisObject.bgColor;
-        localThisObject.check();
-    },200);
-    */
 };
 
 /*
@@ -103,7 +95,11 @@ GameObject.prototype.check = function (_obj, _sequence, _moveNum, _isStrict) {
 
 //* ********************************************************//
 
-var button0 = new GameObject(0, '#00BA47', '#89ed91');
-var button1 = new GameObject(1, '#A50000', '#ef8686');
-var button2 = new GameObject(2, '#C6B800', '#f4ed89');
-var button3 = new GameObject(3, '#302293', '#6d75ed');
+var button0 = new GameObject();
+button0.initializeButton(0, '#00BA47', '#89ed91');
+var button1 = new GameObject();
+button1.initializeButton(1, '#A50000', '#ef8686');
+var button2 = new GameObject();
+button2.initializeButton(2, '#C6B800', '#f4ed89');
+var button3 = new GameObject();
+button3.initializeButton(3, '#302293', '#6d75ed');

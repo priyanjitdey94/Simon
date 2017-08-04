@@ -261,7 +261,7 @@ Game.prototype.displayHelper = function (j, id, offset, _seqIterator) {
         localDocument.style.backgroundColor = '#6d75ed';
         break;
     }
-    // document.getElementById('soundbutton' + id).play();
+    document.getElementById('soundbutton' + id).play();
 
     setTimeout(function () {
       switch (id) {
